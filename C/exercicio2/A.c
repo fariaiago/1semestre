@@ -5,8 +5,7 @@ int main(void)
 	float vlor = 0;
 	//Preço da compra
 	printf("Preço:");
-	scanf(%f, vlor);
-	printf("\n");
+	scanf("%f", &vlor);
 	if(vlor > 100)
 	{
 		vlor = vlor*0.9;
