@@ -3,6 +3,7 @@
 int main(void)
 {
 	float vlor = 0;
+	
 	//Preço da compra
 	printf("Preço:");
 	scanf("%f", &vlor);
