@@ -11,6 +11,6 @@ int main(void)
 		vlor = vlor*0.9;
 	}
 
-	printf("Valor a ser pago: R$%2f\n", vlor);
+	printf("Valor a ser pago: R$%.2f\n", vlor);
 	return 0;
 }
