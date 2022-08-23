@@ -14,7 +14,11 @@ int main(void)
 
 	if(n_irms > 1)
 	{
-		
+		prço -= 55;
+	}
+	else if(n_irms > 0)
+	{
+		prço -= 30;
 	}
 	return 0;
 }
