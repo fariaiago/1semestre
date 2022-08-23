@@ -10,6 +10,12 @@ int main(void)
 	int vnceu = ler_int("O valor foi pago antes do vencimento? (\"0\" para não e \"1\" para sim): ");
 
 	if(rqr_mtrl)
+		prço += 50;
+
+	if(n_irms > 1)
+	{
+		
+	}
 	return 0;
 }
 
