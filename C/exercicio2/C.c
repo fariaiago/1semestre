@@ -10,24 +10,30 @@ int main(void)
 	int vnceu = ler_int("O valor foi pago antes do vencimento? (\"0\" para não e \"1\" para sim): ");
 
 	if(rqr_mtrl)
-		prço += 50;
+		prço += 50.0;
 
 	if(n_irms > 1)
 	{
-		prço -= 55;
+		prço -= 55.0;
 	}
 	else if(n_irms > 0)
 	{
-		prço -= 30;
+		prço -= 30.0;
 	}
+
+	if(!vnceu)
+		prço = prço * 0.9;
+
+	printf("Custo da matrícula: R$%.2f\n", prço);
+
 	return 0;
 }
 
 int ler_int(char *txto)
 {
 	int n = 0;
-	printf(txto);
-	scanf("%d" &n);
+	printf("%s", txto);
+	scanf("%d", &n);
 
 	return n;
 }
