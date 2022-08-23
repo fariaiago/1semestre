@@ -21,7 +21,7 @@ int main(void)
 		prço -= 30.0;
 	}
 
-	if(!vnceu)
+	if(vnceu)
 		prço = prço * 0.9;
 
 	printf("Custo da matrícula: R$%.2f\n", prço);
