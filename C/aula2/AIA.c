@@ -17,24 +17,30 @@ int main(int argc, char *argv[])
 	{
 		case 0:
 			soma(argv);
+			break;
 		case 1:
 			md2(argv);
+			break;
 		case 2:
 			md3mr5(argv);
+			break;
 		case 3:
 			antsuc(argv);
+			break;
 		case 4:
 			terc(argv);
+			break;
 		case 5:
 			dv(argv);
+			break;
 		case 6:
 			nome(argv);
+			break;
 		case 7:
 			entr(argv);
-		case 8:
-		case 9:
-		case 10:
-		case 11;
+			break;
+		default:
+			break;
 	}
 }
 
@@ -88,7 +94,7 @@ void nome(char *argv[])
 {
 	char *n;
 	printf("Nome: ");
-	scanf("%d", &n);
+	scanf("%s", n);
 	printf("Olá %s\n", n);
 }
 
