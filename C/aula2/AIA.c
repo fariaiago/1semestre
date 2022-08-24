@@ -110,3 +110,8 @@ void entr(char *argv[])
 		printf("! 20 < x < 90\n");
 	}
 }
+
+void mr2(char *argv[])
+{
+	a
+}
