@@ -26,14 +26,14 @@ int main(int argc, char *argv[])
 
 void soma(char *argv[])
 {
-	printf("%i", atoi(argv[2]) + atoi(argv[3]));
+	printf("%i\n", atoi(argv[2]) + atoi(argv[3]));
 }
 
 void media2(char *argv[])
 {
 	float n1 = atof(argv[2]);
 	float n2 = atof(argv[3]);
-	printf("%f", (n1 + n2)/2.0);
+	printf("%f\n", (n1 + n2)/2.0);
 }
 
 void media3(char *argv[])
@@ -42,5 +42,10 @@ void media3(char *argv[])
 	float n2 = atof(argv[3]);
 	float n3 = atof(argv[4]);
 	float md = (n1+n2+n3)/3.0f;
+	if(md > 5)
+	{
+		printf("> 5\n");
+	}
+	else
 	printf("%f", (n1 + n2)/2.0f);
 }
