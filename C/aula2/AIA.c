@@ -137,7 +137,7 @@ void tdmr0(char *argv[])
 
 	if(n1 > 0 || n2 > 0 || n3 > 0)
 	{
-		printf("Tds > 0 \n");
+		printf("Tds > 0\n");
 	}
 	else
 	{
