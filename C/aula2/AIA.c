@@ -6,7 +6,7 @@ void md2(char *argv[]);
 void md3mr5(char *argv[]);
 void antsuc(char *argv[]);
 void terc(char *argv[]);
-void div(char *argv[]);
+void dv(char *argv[]);
 void nome(char *argv[]);
 void entr(char *argv[]);
 
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 		case 4:
 			terc(argv);
 		case 5:
-			div(argv);
+			dv(argv);
 		case 6:
 			nome(argv);
 		case 7:
@@ -77,7 +77,7 @@ void terc(char *argv[])
 	printf("terc: %f\n", atof(argv[2])/3.0f);
 }
 
-void div(char *argv[])
+void dv(char *argv[])
 {
 	int n1 = atoi(argv[2]);
 	int n2 = atoi(argv[3]);
