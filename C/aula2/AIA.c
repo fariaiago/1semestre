@@ -50,28 +50,30 @@ void media3(char *argv[])
 	{
 		printf("!> 5\n");
 	}
-	printf("%f", (n1 + n2)/2.0f);
 }
 
 void antsuc(char *argv[])
 {
 	int n1 = atoi(argv[2]);
-	printf("ant: %i, suc: %i", n1-1, n1+1);
+	printf("ant: %i, suc: %i\n", n1-1, n1+1);
 }
 
 void terc(char *argv[])
 {
-	printf("terc: %f", atof(argv[2])/3.0f);
+	printf("terc: %f\n", atof(argv[2])/3.0f);
 }
 
 void div(char *argv[])
 {
 	int n1 = atoi(argv[2]);
 	int n2 = atoi(argv[3]);
-	printf("%i / %i = %f", n1, n2, n1/n2*1.0f);
+	printf("%i / %i = %f\n", n1, n2, n1/n2*1.0f);
 }
 
 void nome(char *argv[])
 {
-	
+	char *n;
+	printf("Nome?");
+	scanf("%d", &n);
+	printf("Olá %s\n", n);
 }
