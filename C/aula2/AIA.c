@@ -87,7 +87,7 @@ void dv(char *argv[])
 {
 	int n1 = atoi(argv[2]);
 	int n2 = atoi(argv[3]);
-	printf("%i / %i = %f\n", n1, n2, n1/n2*1.0f);
+	printf("%i / %i = %f\n", n1, n2, n1*1.0f/n2*1.0f);
 }
 
 void nome(char *argv[])
