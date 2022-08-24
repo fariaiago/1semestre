@@ -68,5 +68,5 @@ void div(char *argv[])
 {
 	int n1 = atoi(argv[2]);
 	int n2 = atoi(argv[3]);
-	
+	printf("%i / %i = %f", n1, n2, );
 }
