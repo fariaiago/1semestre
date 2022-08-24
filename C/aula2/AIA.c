@@ -61,5 +61,5 @@ void antsuc(char *argv[])
 
 void terc(char *argv[])
 {
-	printf("terc: ",);
+	printf("terc: ", );
 }
