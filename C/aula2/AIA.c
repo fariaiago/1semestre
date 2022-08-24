@@ -92,7 +92,7 @@ void dv(char *argv[])
 
 void nome(char *argv[])
 {
-	char *n;
+	char n[100];
 	printf("Nome: ");
 	scanf("%s", n);
 	printf("Olá %s\n", n);
@@ -101,7 +101,7 @@ void nome(char *argv[])
 void entr(char *argv[])
 {
 	int n = atoi(argv[2]);
-	if(20 =< n && n =< 90)
+	if(20 <= n && n <= 90)
 	{
 		printf("20 < x < 90\n");
 	}
