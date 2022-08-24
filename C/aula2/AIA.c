@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void soma(char *argv[]);
+
 int main(int argc, char *argv[])
 {
-	int modo = argv[1];
+	int modo = atoi(argv[1]);
 	switch(modo)
 	{
 		case 0:
@@ -20,4 +22,9 @@ int main(int argc, char *argv[])
 		case 10:
 		case 11:
 	}
+}
+
+void soma(char *argv[])
+{
+	
 }
