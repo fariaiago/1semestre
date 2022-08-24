@@ -61,5 +61,12 @@ void antsuc(char *argv[])
 
 void terc(char *argv[])
 {
-	printf("terc: ", );
+	printf("terc: %f", atof(argv[2])/3.0f);
+}
+
+void div(char *argv[])
+{
+	int n1 = atoi(argv[2]);
+	int n2 = atoi(argv[3]);
+	
 }
