@@ -128,3 +128,8 @@ void mr2(char *argv[])
 		printf("%i = %i\n", n1, n2);
 	}
 }
+
+void nnga(char *argv[])
+{
+	
+}
