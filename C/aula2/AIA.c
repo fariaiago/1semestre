@@ -113,5 +113,18 @@ void entr(char *argv[])
 
 void mr2(char *argv[])
 {
-	a
+	int n1 = atoi(argv[2]);
+	int n2 = atoi(argv[3]);
+	if(n1 > n2)
+	{
+		printf("%i > %i\n", n1, n2);
+	}
+	else if(n1 < n2)
+	{
+		printf("%i < %i\n", n1, n2);
+	}
+	else
+	{
+		printf("%i = %i\n", n1, n2);
+	}
 }
