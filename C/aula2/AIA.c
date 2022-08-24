@@ -9,6 +9,9 @@ void terc(char *argv[]);
 void dv(char *argv[]);
 void nome(char *argv[]);
 void entr(char *argv[]);
+void dv(char *argv[]);
+void nome(char *argv[]);
+void entr(char *argv[]);
 
 int main(int argc, char *argv[])
 {
@@ -155,5 +158,16 @@ void nnls(char *argv[])
 		printf("Erro\n");
 	}
 
-	if(n1 > 0 && n2)
+	if(n1 > 0 && n2 > 0)
+	{
+		printf("Dois\n");
+	}
+	else if(n1 > 0 || n2 > 0)
+	{
+		printf("Um\n");
+	}
+	else
+	{
+		printf("Nenhum");
+	}
 }
