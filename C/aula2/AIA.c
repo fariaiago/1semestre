@@ -41,5 +41,6 @@ void media3(char *argv[])
 	float n1 = atof(argv[2]);
 	float n2 = atof(argv[3]);
 	float n3 = atof(argv[4]);
-	printf("%f", (n1 + n2)/2.0);
+	float md = (n1+n2+n3)/3.0f;
+	printf("%f", (n1 + n2)/2.0f);
 }
