@@ -129,7 +129,18 @@ void mr2(char *argv[])
 	}
 }
 
-void nnga(char *argv[])
+void tdmr0(char *argv[])
 {
-	
+	int n1 = atoi(argv[2]);
+	int n2 = atoi(argv[3]);
+	int n3 = atoi(argv[4]);
+
+	if(n1 > 0 || n2 > 0 || n3 > 0)
+	{
+		printf("Tds > 0 \n");
+	}
+	else
+	{
+		printf("n < 0\n");
+	}
 }
