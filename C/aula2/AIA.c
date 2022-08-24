@@ -147,5 +147,13 @@ void tdmr0(char *argv[])
 
 void nnls(char *argv[])
 {
-	int n1
+	int n1 = atoi(argv[2]);
+	int n2 = atoi(argv[3]);
+
+	if(n1 == 0 || n2 == 0)
+	{
+		printf("Erro\n");
+	}
+
+	if(n1 > 0 && n2)
 }
