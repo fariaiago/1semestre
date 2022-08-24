@@ -9,9 +9,9 @@ void terc(char *argv[]);
 void dv(char *argv[]);
 void nome(char *argv[]);
 void entr(char *argv[]);
-void dv(char *argv[]);
-void nome(char *argv[]);
-void entr(char *argv[]);
+void mr2(char *argv[]);
+void tdmr0(char *argv[]);
+void nnls(char *argv[]);
 
 int main(int argc, char *argv[])
 {
@@ -41,6 +41,15 @@ int main(int argc, char *argv[])
 			break;
 		case 7:
 			entr(argv);
+			break;
+		case 8:
+			mr2(argv);
+			break;
+		case 9:
+			tdmr0(argv);
+			break;
+		case 10:
+			nnls(argv);
 			break;
 		default:
 			break;
@@ -168,6 +177,6 @@ void nnls(char *argv[])
 	}
 	else
 	{
-		printf("Nenhum");
+		printf("Nenhum\n");
 	}
 }
