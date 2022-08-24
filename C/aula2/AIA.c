@@ -73,7 +73,20 @@ void div(char *argv[])
 void nome(char *argv[])
 {
 	char *n;
-	printf("Nome?");
+	printf("Nome: ");
 	scanf("%d", &n);
 	printf("Olá %s\n", n);
+}
+
+void entr(char *argv[])
+{
+	int n = atoi(argv[2]);
+	if(20 =< n && n =< 90)
+	{
+		printf("20 < x < 90\n");
+	}
+	else
+	{
+		printf("! 20 < x < 90\n");
+	}
 }
