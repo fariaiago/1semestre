@@ -47,5 +47,19 @@ void media3(char *argv[])
 		printf("> 5\n");
 	}
 	else
+	{
+		printf("!> 5\n");
+	}
 	printf("%f", (n1 + n2)/2.0f);
+}
+
+void antsuc(char *argv[])
+{
+	int n1 = atoi(argv[2]);
+	printf("ant: %i, suc: %i", n1-1, n1+1);
+}
+
+void terc(char *argv[])
+{
+	printf("terc: ",);
 }
