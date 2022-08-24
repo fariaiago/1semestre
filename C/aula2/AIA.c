@@ -2,6 +2,13 @@
 #include <stdlib.h>
 
 void soma(char *argv[]);
+void md2(char *argv[]);
+void md3mr5(char *argv[]);
+void antsuc(char *argv[]);
+void terc(char *argv[]);
+void div(char *argv[]);
+void nome(char *argv[]);
+void entr(char *argv[]);
 
 int main(int argc, char *argv[])
 {
@@ -11,12 +18,19 @@ int main(int argc, char *argv[])
 		case 0:
 			soma(argv);
 		case 1:
+			md2(argv);
 		case 2:
+			md3mr5(argv);
 		case 3:
+			antsuc(argv);
 		case 4:
+			terc(argv);
 		case 5:
+			div(argv);
 		case 6:
+			nome(argv);
 		case 7:
+			entr(argv);
 		case 8:
 		case 9:
 		case 10:
