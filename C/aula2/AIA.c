@@ -147,13 +147,13 @@ void tdmr0(char *argv[])
 	int n2 = atoi(argv[3]);
 	int n3 = atoi(argv[4]);
 
-	if(n1 > 0 || n2 > 0 || n3 > 0)
+	if(n1 < 0 || n2 < 0 || n3 < 0)
 	{
-		printf("Tds > 0\n");
+		printf("n < 0\n");
 	}
 	else
 	{
-		printf("n < 0\n");
+		printf("Nnhm < 0\n");
 	}
 }
 
@@ -165,6 +165,7 @@ void nnls(char *argv[])
 	if(n1 == 0 || n2 == 0)
 	{
 		printf("Erro\n");
+		return;
 	}
 
 	if(n1 > 0 && n2 > 0)
