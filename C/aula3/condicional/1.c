@@ -18,10 +18,11 @@ int main(void)
 pessoa crr_pss(char *n_pssoa)
 {
 	pessoa p;
+	p.nome = "";
 	printf("Nome da %s pessoa: ", n_pssoa);
 	scanf("%s", p.nome);
 	printf("Idade da %s pessoa: ", n_pssoa);
-	scanf("%d", p.idade);
+	scanf("%d", &(p.idade));
 	printf("Peso da %s pessoa: ", n_pssoa);
 	scanf("%f", &(p.peso));
 	return p;
