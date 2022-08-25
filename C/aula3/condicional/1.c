@@ -9,12 +9,14 @@ typedef struct pessoa
 
 int main(void)
 {
-	j
+	pessoa p1 = crr_pss();
 	return 0;
 }
 
 pessoa crr_pss()
 {
 	pessoa *p;
-	scanf();
+	printf("Nome, idade, peso(nessa ordem):");
+	scanf("%s %d %d", p.nome, p.idade, p.peso);
+	return p;
 }
