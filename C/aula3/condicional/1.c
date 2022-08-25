@@ -13,3 +13,8 @@ int main(void)
 	return 0;
 }
 
+pessoa crr_pss()
+{
+	pessoa *p;
+	scanf();
+}
