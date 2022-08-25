@@ -7,18 +7,22 @@ typedef struct pessoa
 	float peso;
 } pessoa;
 
-pessoa crr_pss();
+pessoa crr_pss(char*);
 
 int main(void)
 {
-	pessoa p1 = crr_pss();
+	pessoa p1 = crr_pss("primeira");
 	return 0;
 }
 
-pessoa crr_pss()
+pessoa crr_pss(char *n_pssoa)
 {
 	pessoa p;
-	printf("Nome, idade, peso(nessa ordem): ");
-	scanf("%s %d %f", p.nome, &(p.idade), &(p.peso));
+	printf("Nome da %s pessoa: ", n_pssoa);
+	scanf("%s", p.nome);
+	printf("Idade da %s pessoa: ", n_pssoa);
+	scanf("%d", &(p.idade));
+	printf("Peso da %s pessoa: ", n_pssoa);
+	scanf("%f", &(p.peso));
 	return p;
 }
