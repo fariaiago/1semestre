@@ -1,12 +1,15 @@
 #include <stdio.h>
 
-typedef
+typedef struct pessoa
 {
-	l
-}
+	char *nome;
+	int idade;
+	float peso;
+} pessoa;
 
 int main(void)
 {
 	j
 	return 0;
 }
+
