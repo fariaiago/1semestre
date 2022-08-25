@@ -19,6 +19,6 @@ pessoa crr_pss()
 {
 	pessoa *p;
 	printf("Nome, idade, peso(nessa ordem):");
-	scanf("%s %d %d", p->nome, &p->idade, &p->peso);
+	scanf("%s %d %f", p->nome, &p->idade, &p->peso);
 	return p;
 }
