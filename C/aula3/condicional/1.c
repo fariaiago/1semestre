@@ -21,10 +21,10 @@ pessoa crr_pss(char *n_pssoa)
 	pessoa p;
 	p.nome = "Aaaaaaa";
 	p.idade = 10;
-	printf("%i %p", p.idade, &(p.idade));
+	printf("%i %p\n", p.idade, &(p.idade));
 
 	char *nm = NULL;
 	printf("Nome da %s pessoa: ", n_pssoa);
-	scanf(" %s", nm);
+	scanf(" %s ", nm);
 	return p;
 }
