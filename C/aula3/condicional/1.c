@@ -2,7 +2,7 @@
 
 typedef struct pessoa
 {
-	char *nome;
+	char nome[20];
 	int idade;
 	float peso;
 } pessoa;
@@ -19,12 +19,7 @@ pessoa crr_pss(char *n_pssoa)
 {
 
 	pessoa p;
-	p.nome = "Aaaaaaa";
-	p.idade = 10;
-	printf("%i %p\n", p.idade, &(p.idade));
-
-	char *nm = NULL;
 	printf("Nome da %s pessoa: ", n_pssoa);
-	scanf(" %s ", nm);
+	scanf(" %s %d", p.nome, &(p.idade));
 	return p;
 }
