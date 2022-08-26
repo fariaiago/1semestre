@@ -17,7 +17,7 @@ int main(void)
 
 pessoa crr_pss(char *n_pssoa)
 {
-	char *nm;
+	char *nm = NULL;
 	int idd;
 	float peso;
 	printf("Nome da %s pessoa: ", n_pssoa);
@@ -27,5 +27,6 @@ pessoa crr_pss(char *n_pssoa)
 	printf("Peso da %s pessoa: ", n_pssoa);
 	scanf("%f", &peso);
 	pessoa p;
+	p.nome = nm;
 	return p;
 }
