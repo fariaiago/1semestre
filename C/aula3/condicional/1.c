@@ -22,6 +22,6 @@ pessoa crr_pss(char *n_pssoa)
 
 	pessoa p;
 	printf("Nome, idade e peso da %s pessoa(respectivamente e separado por espaço): ", n_pssoa);
-	scanf(" %s %d", p.nome, &(p.idade));
+	scanf(" %s %d %f", p.nome, &(p.idade), &(p.peso));
 	return p;
 }
