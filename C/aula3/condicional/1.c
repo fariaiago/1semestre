@@ -22,8 +22,10 @@ pessoa crr_pss(char *n_pssoa)
 	float peso;
 	printf("Nome da %s pessoa: ", n_pssoa);
 	scanf("%s", nm);
+	getchar();
 	printf("Idade da %s pessoa: ", n_pssoa);
-	scanf("%d", &idd);
+	getchar();
+	scanf(" %d", &idd);
 	printf("Peso da %s pessoa: ", n_pssoa);
 	scanf("%f", &peso);
 	pessoa p;
