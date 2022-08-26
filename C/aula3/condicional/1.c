@@ -21,7 +21,7 @@ pessoa crr_pss(char *n_pssoa)
 	pessoa p;
 	p.nome = NULL;
 	printf("Nome da %s pessoa: ", n_pssoa);
-	scanf("%s", p.nome);
+	scanf("%s %d", p.nome, &(p.idade));
 	getchar();
 	printf("Idade da %s pessoa: ", n_pssoa);
 	scanf(" %d", &(p.idade));
