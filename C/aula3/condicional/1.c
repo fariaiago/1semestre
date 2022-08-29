@@ -21,7 +21,11 @@ int main(void)
 	float md_ps = (p1.peso+p2.peso+p3.peso)*1.0f/3.0f;
 	if(md_ps > 55)
 	{
-		printf("")
+		printf("Média peso > 55");
+	}
+	else
+	{
+		printf("Média peso < 55");
 	}
 	return 0;
 }
