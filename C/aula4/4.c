@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 int main()
 {
@@ -14,4 +15,5 @@ float ler_imc(int n_pssoa)
 	float ps = 0, altra = 0;
 	printf("Qual o sexo(\"0\" para mulher, \"1\" para homem)peso(em kg), altura(em metros) da %i° pessoa: ", n_pssoa + 1);
 	scanf(" %d %f %f",e_mlhr, ps, altra);
+	float imc = pow(ps, 2)/altra;
 }
