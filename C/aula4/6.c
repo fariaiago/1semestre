@@ -13,8 +13,8 @@ int main()
 		if(md_alno >= 7)
 		{
 			n_pssou++;
-			mr_nta = md_alno > mr_nta ? md_alno : mr_nta;
 		}
+		mr_nta = md_alno > mr_nta ? md_alno : mr_nta;
 		printf("Aluno n°%i%s passou, %i passaram direto, maior nota é %.2f e a média atual da turma é %.2f\n",
 			i + 1, md_alno >= 7 ? "" : " não", n_pssou, mr_nta, md_trma/(i+1));
 	}
