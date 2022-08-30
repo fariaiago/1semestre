@@ -14,7 +14,7 @@ int main()
 			n_pssou++;
 			mr_nta = md_alno > mr_nta ? md_alno : mr_nta;
 		}
-		printf("Aluno n°%i%s passou, %i passram direto e maior nota é %f\n", i + 1, md_alno >= 7 ? "" : " não", n_pssou, );
+		printf("Aluno n°%i%s passou, %i passaram direto e maior nota é %f\n", i + 1, md_alno >= 7 ? "" : " não", n_pssou, );
 	}
 }
 
