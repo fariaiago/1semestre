@@ -17,6 +17,6 @@ float ler_imc(int n_pssoa)
 	float imc = pow(ps, 2)/altra;
 	if(imc > 24.5f + (e_mlhr*1.0f))
 	{
-		printf();
+		printf("");
 	}
 }
