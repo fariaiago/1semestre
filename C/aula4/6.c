@@ -9,12 +9,14 @@ int main()
 	{
 		int n_pssou = 0;
 		float md_alno = md(i + 1);
+		md_trma += md_alno;
 		if(md_alno >= 7)
 		{
 			n_pssou++;
 			mr_nta = md_alno > mr_nta ? md_alno : mr_nta;
 		}
-		printf("Aluno n°%i%s passou, %i passaram direto e maior nota é %f\n", i + 1, md_alno >= 7 ? "" : " não", n_pssou, );
+		printf("Aluno n°%i%s passou, %i passaram direto, maior nota é %f e a média atual da turma é %f\n",
+			i + 1, md_alno >= 7 ? "" : " não", n_pssou, mr_nta, md_trma/(i+1));
 	}
 }
 
