@@ -5,7 +5,7 @@ void ler_imc(int);
 
 int main()
 {
-	for(int i = 0; i < 2; i++)
+	for(int i = 0; i < 15; i++)
 	{
 		ler_imc(i+1);
 	}
