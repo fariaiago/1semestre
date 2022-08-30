@@ -2,15 +2,15 @@
 
 int main(void)
 {
-	int ldA = 0, ldB = 0, ldC = 0;
+	int lds[3];
 	printf("Qual os lados do triângulo? ");
-	scanf(" %d %d %d", &ldA, &ldB, &ldC);
+	scanf(" %d %d %d", &lds[0], &lds[1], &lds[2]);
 
 	for(int i = 0; i < 3; i++)
 	{
 		
 	}
-	if(ldA == ldB && ldA == ldC)
+	/*if(ldA == ldB && ldA == ldC)
 	{
 		printf("Triângulo equilátero\n");
 	}
@@ -21,5 +21,5 @@ int main(void)
 	else
 	{
 		printf("Eleitor facultativo.\n");
-	}
+	}*/
 }
