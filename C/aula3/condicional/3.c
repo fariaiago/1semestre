@@ -2,15 +2,19 @@
 
 int main(void)
 {
-	int idade = 0;
-	printf("Qual sua idade? ");
-	scanf(" %d", &idade);
+	int ldA = 0, ldB = 0, ldC = 0;
+	printf("Qual os lados do triângulo? ");
+	scanf(" %d %d %d", &ldA, &ldB, &ldC);
 
-	if(idade > 18 && idade < 60)
+	for(int i = 0; i < 3; i++)
 	{
-		printf("Eleitor obrigatório.\n");
+		
 	}
-	else if(idade < 16)
+	if(ldA == ldB && ldA == ldC)
+	{
+		printf("Triângulo equilátero\n");
+	}
+	else if(ldA == ldB || ldA == ldC || ldB == ldC)
 	{
 		printf("Não é eleitor ainda.\n");
 	}
