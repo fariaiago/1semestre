@@ -8,7 +8,7 @@ int main(void)
 
 	for(int i = 0; i < 3; i++)
 	{
-		
+		if(!(lds[i] < lds[i+1] + lds[i+2]))
 	}
 	/*if(ldA == ldB && ldA == ldC)
 	{
