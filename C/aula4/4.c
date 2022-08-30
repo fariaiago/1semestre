@@ -10,5 +10,6 @@ int main()
 
 float ler_imc(int n_pssoa)
 {
-	printf
+	printf("Qual o sexo(\"0\" para mulher, \"1\" para homem)peso(em kg), altura(em metros) da %i° pessoa: ", n_pssoa + 1);
+	scanf("");
 }
