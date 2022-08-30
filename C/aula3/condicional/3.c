@@ -6,20 +6,23 @@ int main(void)
 	printf("Qual os lados do triângulo? ");
 	scanf(" %d %d %d", &lds[0], &lds[1], &lds[2]);
 
-	for(int i = 0; i < 3; i++)
+	if(!(lds[0] < lds[1] + lds[2]) || !(lds[1] < lds[0] + lds[2]) || !(lds[2] < lds[0] + lds[1]))
 	{
-		if(!(lds[i] < lds[i+1] + lds[i+2]))
+		printf("Erro: não é triângulo\n");
+		return 1;
 	}
-	/*if(ldA == ldB && ldA == ldC)
+
+	if(lds[0] == lds[1] && lds[0] == lds[2])
 	{
 		printf("Triângulo equilátero\n");
 	}
-	else if(ldA == ldB || ldA == ldC || ldB == ldC)
+	else if(lds[0] == lds[1] || lds[0] == lds[2] || lds[1] == lds[2])
 	{
-		printf("Não é eleitor ainda.\n");
+		printf("Triângulo isóceles\n");
 	}
 	else
 	{
-		printf("Eleitor facultativo.\n");
-	}*/
+		printf("Triângulo escaleno.\n");
+	}
+	return 0;
 }
