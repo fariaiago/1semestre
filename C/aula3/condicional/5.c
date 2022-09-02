@@ -5,7 +5,8 @@ int main(int argc, char *argv[])
 {
 	if(argc != 4)
 	{
-		printf
+		printf("Uso: ./5 <tipo de investimento> <Valor> <N° meses>\n"
+		"Tipos válidos: \"0\" poupança(5%), \"1\" renda fixa(25%)\n");
 		return 1;
 	}
 
