@@ -13,12 +13,12 @@ int main(int argc, char *argv[])
 	int tpo = atoi(argv[1]), mses = atoi(argv[3]);;
 	float quntia = atof(argv[2]);
 
-	float vlor_final = quntia, taxa = tpo ? 1.25 : 1.05;
+	float taxa = tpo ? 1.25 : 1.05;
 	for(int i = 0; i < mses; i++)
 	{
-		vlor_final = vlor_final * taxa;
+		quntia = quntia * taxa;
 	}
 
-	printf("Valor: %.2f\n", vlor_final);
+	printf("Valor: %.2f\n", quntia);
 	return 0;
 }
