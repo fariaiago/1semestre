@@ -9,7 +9,8 @@ int main(int argc, char *argv[])
 		return 1;
 	}
 
-	
+	printf("Esse paciente possui:\n");
+
 	int sxo = atoi(argv[1]), glcmia = atoi(argv[2]), hdl = atoi(argv[3]);
 	if(glcmia < 110)
 	{
