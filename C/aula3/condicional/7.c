@@ -20,10 +20,10 @@ int main(int argc, char *argv[])
 		case 2:
 			imprmr_dstno("Norte", 5);
 			break;
-		case 3, 4:
+		case 3 ... 4:
 			imprmr_dstno("Leste", 8);
 			break;
-		case 5 || 6 || 7 || 8 || 9 || 10:
+		case 5 ... 10:
 			imprmr_dstno("Oeste", 9);
 			break;
 		default:
