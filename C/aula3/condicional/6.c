@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 		printf("	Glicemia anormal\n");
 	}
 
-	if(hdl > 30 + sxo * 5 && hdl < 65 + sxo * 15)
+	if(hdl >= 30 + sxo * 5 && hdl <= 65 + sxo * 15)
 	{
 		printf("	HDL normal\n");
 	}
