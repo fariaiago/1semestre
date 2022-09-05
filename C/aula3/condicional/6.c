@@ -3,13 +3,13 @@
 
 int main(int argc, char *argv[])
 {
-	if(argc != 3)
+	if(argc != 4)
 	{
-		printf("Uso: ./6 <glicemia> <HDL> (em mg/dl)\n");
+		printf("Uso: ./6 <sexo> <glicemia> <HDL> (em mg/dl)\n");
 		return 1;
 	}
 
-	int glcmia = atoi(argv[1]), hdl = atoi(argv[2]);
+	int sxo = atoi(argv[1]), glcmia = atoi(argv[2]), hdl = atoi(argv[3]);
 	if(glcmia < 110)
 	{
 		printf("	Glicemia normal\n");
