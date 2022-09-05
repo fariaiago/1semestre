@@ -9,6 +9,7 @@ int main(int argc, char *argv[])
 		return 1;
 	}
 
+	
 	int sxo = atoi(argv[1]), glcmia = atoi(argv[2]), hdl = atoi(argv[3]);
 	if(glcmia < 110)
 	{
@@ -19,13 +20,13 @@ int main(int argc, char *argv[])
 		printf("	Glicemia anormal\n");
 	}
 
-	if(hdl)
+	if(hdl > 30 + sxo * 5 && hdl < 65 + sxo * 15)
 	{
-		printf("	Glicemia normal\n");
+		printf("	HDL normal\n");
 	}
 	else
 	{
-		printf("	Glicemia anormal\n");
+		printf("	HDL anormal\n");
 	}
 
 	return 0;
