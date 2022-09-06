@@ -10,9 +10,16 @@ int main(int argc, char *argv[])
 			"De esquina: \"0\" para não, \"1\" para sim\n");
 		return 1;
 	}
-	int area = atoi(argv[1]), rg = atoi(argv[2]), esq = atoi(argv[3]), prç = 0;
+	int area = atoi(argv[1]), rg = atoi(argv[2]), esq = atoi(argv[3]);
+	float prç = 0;
 	if(rg)
 		prç = area*150;
 	else
 		prç = area*100;
+
+	if(esq)
+		prç += 600;
+	if(area > 400)
+		prç = prç * 1.25;
+	return;
 }
