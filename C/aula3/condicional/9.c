@@ -16,10 +16,9 @@ int main(int argc, char *argv[])
 		prç = area*150;
 	else
 		prç = area*100;
-
 	if(esq)
 		prç += 600;
 	if(area > 400)
 		prç = prç * 1.25;
-	return;
+	return 0;
 }
