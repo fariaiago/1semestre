@@ -3,20 +3,17 @@
 
 int main(int argc, char *argv[])
 {
-	int soma = 0, num = 0;
-	for(int i = 1; i < argc; i++)
+	int soma = 0;
+	char cntnuar_exec = '+';
+	do
 	{
-		if(i % 2 == 0)
-		{
-			char op = argv[i];
-			if(argv[i] == '+')
-				soma += num;
-			else
-				break
-		}
-		else
-		{
-			num = atoi(argv[i]);
-		}
+		int num = 0;
+		printf("Número? ");
+		scanf(" %d", &num);
+		soma += num;
+		printf("Continuar? (\"=\" para não, \"+\" sim) ");
+		scanf(" %c", &cntnuar_exec);
 	}
+	while(cntnuar_exec == '+');
+	printf("Soma: %i\n", soma);
 }
