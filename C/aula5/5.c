@@ -10,16 +10,18 @@ int main(void)
 		do
 		{
 			char txt[8];
-			//int num = 0;
 			printf("Número? ");
 			scanf(" %s", txt);
 			printf("%s %i\n", txt, strcmp(txt, "fim"));
 			if(strcmp(txt, "fim") == 0 || strcmp(txt, "FIM") == 0)
-				break;
+			{
+				cntnuar = 0;
+			}
 			else
+			{
 				soma += atoi(txt);
-			//printf("Continuar? (\"0\" para não, \"1\" sim) ");
-			//scanf(" %c", &cntnuar);
+				cntnuar = 1;
+			}
 		}
 		while(cntnuar);
 		printf("Valor da compra: %i\n", soma);
