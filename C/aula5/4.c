@@ -7,4 +7,8 @@ int main(int argc, char *argv[])
 	{
 		printf("Uso: ./4 <Preço> <dos> <itens> <comprados> <...>\n");
 	}
+	for(int i = 1; i < argc; i++)
+	{
+		if(i % 2 == 0)
+	}
 }
