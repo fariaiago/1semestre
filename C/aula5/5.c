@@ -9,7 +9,7 @@ int main(void)
 	{
 		do
 		{
-			char *txt = NULL;
+			char txt[8];
 			//int num = 0;
 			printf("Número? ");
 			scanf(" %s", txt);
