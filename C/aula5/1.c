@@ -18,4 +18,6 @@ int main(void)
 	}
 	while(cntnuar_exec);
 	printf("N° idades: %i\n", n_idades);
+
+	return 0;
 }

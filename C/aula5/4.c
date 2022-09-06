@@ -14,5 +14,6 @@ int main(int argc, char *argv[])
 		soma += atof(argv[i]);
 	}
 	printf("Valor: %.2f\n", soma);
+	
 	return 0;
 }
