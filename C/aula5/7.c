@@ -11,8 +11,8 @@ int main(int argc, char *argv[])
 		printf("Uso: ./7 <Número>\n");
 		return 1;
 	}
-	int n = atoi(argv[2]);
-	printf("Tabuada do 5\n");
+	int n = atoi(argv[1]);
+	printf("Tabuada do %i\n", n);
 	tab5_while(n);
 	return 0;
 }
