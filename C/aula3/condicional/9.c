@@ -20,5 +20,6 @@ int main(int argc, char *argv[])
 		prç += 600;
 	if(area > 400)
 		prç = prç * 1.25;
+	printf("Preço do terreno: R$%.2f\n", prç);
 	return 0;
 }
