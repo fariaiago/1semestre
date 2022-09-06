@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	if(vip)
 	{
 		printf("VIP %i\n", vip);
-		vlor = vlor - 100.0;
+		vlor -= 100;
 	}
 	printf("Valor: %.2f\n", vlor);
 	return 0;
