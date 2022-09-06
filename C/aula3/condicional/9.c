@@ -10,17 +10,9 @@ int main(int argc, char *argv[])
 			"De esquina: \"0\" para não, \"1\" para sim\n");
 		return 1;
 	}
-	int area = atoi(argv[1]), rg = atoi(argv[2]), esq = atoi(argv[3]);
-	if(saldo_medio < 250.0)
-	{
-		printf("Saldo médio: %.2f, Crédito: %.2f\n", saldo_medio, saldo_medio*1.05);
-	}
-	else if(saldo_medio > 500.0)
-	{
-		printf("Saldo médio: %.2f, Crédito: %.2f\n", saldo_medio, saldo_medio*1.3);
-	}
+	int area = atoi(argv[1]), rg = atoi(argv[2]), esq = atoi(argv[3]), prç = 0;
+	if(rg)
+		prç = area*150;
 	else
-	{
-		printf("Saldo médio: %.2f, Crédito: %.2f\n", saldo_medio, saldo_medio*1.1);
-	}
+		prç = area*100;
 }
