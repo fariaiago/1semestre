@@ -3,9 +3,10 @@
 
 int main(int argc, char *argv[])
 {
-	if(argc != 2)
+	if(argc != 3)
 	{
-		printf("Uso: ./8 <saldo médio>\n");
+		printf("Uso: ./9 <Região> <Se lote é de esquina>\n"
+			"Regiões: \"0\" para Norte, \"1\" para Sul\n");
 		return 1;
 	}
 	double saldo_medio = atof(argv[1]);
