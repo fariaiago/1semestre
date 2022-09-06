@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main(void)
 {
@@ -8,11 +9,11 @@ int main(void)
 	{
 		do
 		{
-			char *txt;
+			char *txt = NULL;
 			//int num = 0;
 			printf("Número? ");
 			scanf(" %s", txt);
-			if(txt == "fim" || txt == "FIM")
+			if(strcmp(txt, "fim") == 0 || strcmp(txt, "FIM") == 0)
 				break;
 			else
 				soma += atoi(txt);
@@ -22,7 +23,7 @@ int main(void)
 		while(cntnuar);
 		printf("Valor da compra: %i\n", soma);
 		printf("Nova compra? (\"0\" para não, \"1\" sim) ");
-		scanf(" %c", &nv_cmpra);
+		scanf(" %d", &nv_cmpra);
 	}
 	while(nv_cmpra);
 
