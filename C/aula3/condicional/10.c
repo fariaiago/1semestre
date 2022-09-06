@@ -10,4 +10,5 @@ int main(int argc, char *argv[])
 			"Projeto estrutural: \"0\" para não, \"1\" para sim\n");
 		return 1;
 	}
+	return 0;
 }
