@@ -17,7 +17,6 @@ int main(int argc, char *argv[])
 		vlor = area * 30;
 	else
 		vlor = area * 20;
-
 	if(deco)
 		vlor += n_cmds * 100;
 	if(strut)
