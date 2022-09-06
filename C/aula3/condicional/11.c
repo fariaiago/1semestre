@@ -16,12 +16,15 @@ int main(int argc, char *argv[])
 	if(!promo)
 	{
 		if(rg)
-			vlor = vlor*1.1;
+			vlor = vlor * 1.1;
 		else
-			vlor = vlor*1.2;
+			vlor = vlor * 1.2;
 	}
 	if(vip)
+	{
+		printf("VIP %i\n", vip);
 		vlor = vlor - 100.0;
+	}
 	printf("Valor: %.2f\n", vlor);
 	return 0;
 }
