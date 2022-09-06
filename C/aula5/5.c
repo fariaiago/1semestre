@@ -12,7 +12,6 @@ int main(void)
 			char txt[8];
 			printf("Número? ");
 			scanf(" %s", txt);
-			printf("%s %i\n", txt, strcmp(txt, "fim"));
 			if(strcmp(txt, "fim") == 0 || strcmp(txt, "FIM") == 0)
 			{
 				cntnuar = 0;
