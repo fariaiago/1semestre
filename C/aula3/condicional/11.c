@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 			vlor = vlor*1.2;
 	}
 	if(vip)
-		vlor += -100;
+		vlor = vlor - 100.0;
 	printf("Valor: %.2f\n", vlor);
 	return 0;
 }
