@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void tab5_for(int);
-void tab5_while(int);
+void tab_for(int);
+void tab_while(int);
 
 int main(int argc, char *argv[])
 {
@@ -13,11 +13,11 @@ int main(int argc, char *argv[])
 	}
 	int n = atoi(argv[1]);
 	printf("Tabuada do %i\n", n);
-	tab5_while(n);
+	tab_while(n);
 	return 0;
 }
 
-void tab5_for(int n)
+void tab_for(int n)
 {
 	for(int i = 0; i <= 10; i++)
 	{
@@ -25,7 +25,7 @@ void tab5_for(int n)
 	}
 }
 
-void tab5_while(int n)
+void tab_while(int n)
 {
 	int i = 0;
 	while(i <= 10)
