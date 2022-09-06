@@ -19,4 +19,6 @@ int main(void)
 	}
 	while(cntnuar_exec);
 	printf("N° de idades: %i, Média das idades: %f\n", n_idades, media*1.0/(n_idades*1.0));
+
+	return 0;
 }

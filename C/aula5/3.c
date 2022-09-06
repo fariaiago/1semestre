@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(int argc, char *argv[])
+int main(void)
 {
 	int soma = 0;
 	char cntnuar_exec = '+';
@@ -15,4 +15,6 @@ int main(int argc, char *argv[])
 	}
 	while(cntnuar_exec == '+');
 	printf("Soma: %i\n", soma);
+
+	return 0;
 }
