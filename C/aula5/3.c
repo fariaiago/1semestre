@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 			if(argv[i] == '+')
 				soma += num;
 			else
-				
+				break
 		}
 		else
 		{
