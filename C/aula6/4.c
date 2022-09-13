@@ -16,6 +16,7 @@ int main(void)
 	int mr_idd = 0;
 	float md_ps = 0, md_idd = 0;
 	char mr_nm[16];
+	strcpy(mr_nm, "Ninguem ainda");
 	for(int i = 1; i <= 3; i++)
 	{
 		pssoas[i-1] = crr_pss(i);
@@ -29,7 +30,7 @@ int main(void)
 		printf("%s tem a maior idade: %i anos\n", mr_nm, mr_idd);
 		printf("Médias: %f anos, %fkg\n", md_idd/i, md_ps/i);
 	}
-	
+
 	return 0;
 }
 
