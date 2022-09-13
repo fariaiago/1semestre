@@ -16,7 +16,7 @@ int main(void)
 	int mr_idd = 0;
 	float md_ps = 0, md_idd = 0;
 	char mr_nm[16];
-	for(int i = 1; i <= 3; i++)
+	for(int i = 1; i <= 10; i++)
 	{
 		pssoas[i-1] = crr_pss(i);
 		md_idd += pssoas[i-1].idade;
