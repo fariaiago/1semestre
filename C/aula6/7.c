@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 	{
 		char prsnç = argv[i];
 		n_prsnç += prsnç == 'P' || prsnç == 'p' ? 1 : 0;
- 		printf("Produto %i° custava R$%.2f e passará a custar R$%.2f, agora classificado como %s.\n", i, prç, nv, clsse(nv));
 	}
+ 	printf("Presença: %f.\n", (1.0*n_prsnç)/(1.0*argc));
 	return 0;
 }
