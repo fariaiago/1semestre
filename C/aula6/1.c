@@ -9,7 +9,8 @@ int main(void)
 		printf("Qual sua idade? ");
 		scanf(" %d", &idade);
 
-		if(idade > 18 && idade < 60)
+		printf("Idade: %i anos. ", idade);
+		if(idade > 18 && idade < 65)
 		{
 			printf("Eleitor obrigatório.\n");
 		}
@@ -21,7 +22,7 @@ int main(void)
 		{
 			printf("Eleitor facultativo.\n");
 		}
-		printf("Continuar? \"0\" não, \"1\" sim.");
+		printf("Continuar? \"0\" não, \"1\" sim: ");
 		scanf(" %d", &exec);
 	}
 	while(exec);
