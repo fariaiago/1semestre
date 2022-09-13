@@ -21,7 +21,6 @@ int main(void)
 		pssoas[i-1] = crr_pss(i);
 		md_idd += pssoas[i-1].idade;
 		md_ps += pssoas[i-1].peso;
-		//printf("%i \n", pssoas[i].idade);
 		if(mr_idd < pssoas[i-1].idade)
 		{
 			mr_idd = pssoas[i-1].idade;
