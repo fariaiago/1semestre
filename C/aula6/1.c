@@ -2,20 +2,27 @@
 
 int main(void)
 {
-	int idade = 0;
-	printf("Qual sua idade? ");
-	scanf(" %d", &idade);
+	int exec = 0;
+	do
+	{
+		int idade = 0;
+		printf("Qual sua idade? ");
+		scanf(" %d", &idade);
 
-	if(idade > 18 && idade < 60)
-	{
-		printf("Eleitor obrigatório.\n");
+		if(idade > 18 && idade < 60)
+		{
+			printf("Eleitor obrigatório.\n");
+		}
+		else if(idade < 16)
+		{
+			printf("Não é eleitor ainda.\n");
+		}
+		else
+		{
+			printf("Eleitor facultativo.\n");
+		}
+		printf("Continuar? \"0\" não, \"1\" sim.");
+		scanf(" %d", &exec);
 	}
-	else if(idade < 16)
-	{
-		printf("Não é eleitor ainda.\n");
-	}
-	else
-	{
-		printf("Eleitor facultativo.\n");
-	}
+	while(exec);
 }
