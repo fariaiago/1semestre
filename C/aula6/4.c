@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 typedef struct pessoa
 {
@@ -23,22 +24,12 @@ int main(void)
 		if(mr_idd > pssoas[i].idade)
 		{
 			mr_idd = pssoas[i].idade;
-			mr_nm = &(pssoas[i].nome);
+			strcpy(mr_nm, pssoas[i].nome);
 		}
+		printf("%s tem a maior idade: %i anos\n", mr_nm, mr_idd);
 		printf("Médias: %f anos, %fkg\n", md_idd/i, md_ps/i);
 	}
-	do
-	{
-		printf("Continuar? \"0\" não, \"1\" sim: ");
-		scanf(" %d", &exec);
-	}
-	while(exec);
-	pessoa p1 = crr_pss("primeira");
-	pessoa p2 = crr_pss("segunda");
-	pessoa p3 = crr_pss("terceira");
-
-	printf("Nomes: %s, %s, %s\n", p1.nome, p2.nome, p3.nome);
-
+	
 	return 0;
 }
 
