@@ -26,4 +26,6 @@ int main(void)
 		scanf(" %d", &exec);
 	}
 	while(exec);
+
+	return 0;
 }
