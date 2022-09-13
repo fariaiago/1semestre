@@ -11,8 +11,7 @@ int main(void)
 
 		if(!(lds[0] < lds[1] + lds[2]) || !(lds[1] < lds[0] + lds[2]) || !(lds[2] < lds[0] + lds[1]))
 		{
-			printf("Erro: não é triângulo\n");
-			return 1;
+			printf("Não é triângulo\n");
 		}
 
 		if(lds[0] == lds[1] && lds[0] == lds[2])
