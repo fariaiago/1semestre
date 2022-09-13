@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int main(void)
 {
@@ -14,11 +13,11 @@ int main(void)
 	int exec = 0;
 	do
 	{
+		int n_pssoa = atoi(argv[1]), n_dias = atoi(argv[2]), mlhas = atoi(argv[3]), trans = atoi(argv[4]);
+		float vlor = (100*n_pssoa*n_dias) + (50*mlhas) + (trans ? 60 : 0);
 		printf("Que fazer outro pacote?\"0\" não, \"1\" sim: ");
 		scanf(" %d", &exec);
 	}
 	while(exec);
-	int n_pssoa = atoi(argv[1]), n_dias = atoi(argv[2]), mlhas = atoi(argv[3]), trans = atoi(argv[4]);
-	float vlor = (100*n_pssoa*n_dias) + (50*mlhas) + (trans ? 60 : 0);
 	return 0;
 }
