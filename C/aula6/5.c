@@ -18,7 +18,7 @@ int main(void)
 			vlor *= 0.95;
 		}
 		printf("Preço final: R$%.2f\n", vlor);
-		printf("Que fazer outro pacote?\"0\" não, \"1\" sim: ");
+		printf("Que fazer outro pacote? \"0\" não, \"1\" sim: ");
 		scanf(" %d", &exec);
 	}
 	while(exec);
