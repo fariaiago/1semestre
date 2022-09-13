@@ -5,7 +5,7 @@ int main(void)
 	if(argc != 4)
 	{
 		printf("Uso: <Número de pessoas no grupo> <Estadia> <Passagem> <Translado aeroporto-hotel>\n"
-			"Estadia: Número de dias\n"
+			"Estadia: Tempo dias\n"
 			"Passagem: Número de milhas\n"
 			"Translado: \"0\" para não, \"1\" para sim\n");
 			return 1;
