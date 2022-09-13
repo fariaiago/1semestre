@@ -1,6 +1,9 @@
 #include <stdio.h>
 
-int main(void)
+int main(int argc, char *argv[])
 {
-	a
+	if(argc != 4)
+	{
+		printf("");
+	}
 }
