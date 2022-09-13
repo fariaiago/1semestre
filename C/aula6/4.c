@@ -19,13 +19,13 @@ int main(void)
 	for(int i = 1; i <= 3; i++)
 	{
 		pssoas[i-1] = crr_pss(i);
-		md_idd += pssoas[i].idade;
-		md_ps += pssoas[i].peso;
+		md_idd += pssoas[i-1].idade;
+		md_ps += pssoas[i-1].peso;
 		//printf("%i \n", pssoas[i].idade);
-		if(mr_idd < pssoas[i].idade)
+		if(mr_idd < pssoas[i-1].idade)
 		{
-			mr_idd = pssoas[i].idade;
-			strcpy(mr_nm, pssoas[i].nome);
+			mr_idd = pssoas[i-1].idade;
+			strcpy(mr_nm, pssoas[i-1].nome);
 		}
 		printf("%s tem a maior idade: %i anos\n", mr_nm, mr_idd);
 		printf("Médias: %f anos, %fkg\n", md_idd/i, md_ps/i);
