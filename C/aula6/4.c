@@ -7,17 +7,30 @@ typedef struct pessoa
 	float peso;
 } pessoa;
 
-pessoa crr_pss(char*);
+pessoa crr_pss(int);
 
 int main(void)
 {
-	int n_pssoa = 0, exec = 0;
+	pessoa pssoas[10];
+	int mr_idd = 0;
 	float md_ps = 0, md_idd = 0;
+	char mr_nm[16];
+	for(int i = 1; i <= 3; i++)
+	{
+		pssoas[i-1] = crr_pss(i);
+		md_idd += pssoas[i].idade;
+		md_ps += pssoas[i].peso;
+		if(mr_idd > pssoas[i].idade)
+		{
+			mr_idd = pssoas[i].idade;
+			mr_nm = &(pssoas[i].nome);
+		}
+		printf("Médias: %f anos, %fkg\n", md_idd/i, md_ps/i);
+	}
 	do
 	{
 		printf("Continuar? \"0\" não, \"1\" sim: ");
 		scanf(" %d", &exec);
-		n_pessoa++;
 	}
 	while(exec);
 	pessoa p1 = crr_pss("primeira");
@@ -25,25 +38,15 @@ int main(void)
 	pessoa p3 = crr_pss("terceira");
 
 	printf("Nomes: %s, %s, %s\n", p1.nome, p2.nome, p3.nome);
-	printf("Médias: %f anos, %fkg\n", (p1.idade + p2.idade + p3.idade)*1.0f/3.0f);
 
-	float md_ps = (p1.peso+p2.peso+p3.peso)*1.0f/3.0f;
-	if(md_ps > 55)
-	{
-		printf("Média peso > 55\n");
-	}
-	else
-	{
-		printf("Média peso < 55\n");
-	}
 	return 0;
 }
 
-pessoa crr_pss(char *n_pssoa)
+pessoa crr_pss(int n_pssoa)
 {
 
 	pessoa p;
-	printf("Nome, idade e peso da %s pessoa(respectivamente e separado por espaço): ", n_pssoa);
+	printf("Nome, idade e peso da %i° pessoa(respectivamente, separado por espaço): ", n_pssoa);
 	scanf(" %s %d %f", p.nome, &(p.idade), &(p.peso));
 	return p;
 }
