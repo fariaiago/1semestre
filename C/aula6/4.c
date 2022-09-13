@@ -16,13 +16,12 @@ int main(void)
 	int mr_idd = 0;
 	float md_ps = 0, md_idd = 0;
 	char mr_nm[16];
-	strcpy(mr_nm, "Ninguem ainda");
 	for(int i = 1; i <= 3; i++)
 	{
 		pssoas[i-1] = crr_pss(i);
 		md_idd += pssoas[i].idade;
 		md_ps += pssoas[i].peso;
-		if(mr_idd > pssoas[i].idade)
+		if(mr_idd < pssoas[i].idade)
 		{
 			mr_idd = pssoas[i].idade;
 			strcpy(mr_nm, pssoas[i].nome);
