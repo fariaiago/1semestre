@@ -4,6 +4,6 @@ int main(int argc, char *argv[])
 {
 	if(argc != 4)
 	{
-		printf("");
+		printf("Uso: <Estadia> <Número de passagems> <Translado aeroporto-hotel>\n");
 	}
 }
