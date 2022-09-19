@@ -9,6 +9,6 @@ int main(int argc, char *argv[])
 	}
 
 	float n1 = atof(argv[1]), n2 = atof(argv[2]);
-	printf("Subtração: %f\n", n1 - n2);
+	printf("Subtração: %f\n", (n1*2 + n2*3)/5);
 	return 0;
 }
