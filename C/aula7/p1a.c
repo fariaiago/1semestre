@@ -29,9 +29,10 @@ atleta criar_atleta(int i)
 		scanf(" %f", &(a.oxi_sang[n_sang]));
 		if(a.oxi_sang[n_sang] == -1 || n_sang == 8)
 		{
-			a.oxi_sang[n_sang] = sm_sang
+			a.oxi_sang[8] = sm_sang/n_sang;
 			break;
 		}
+		sm_sang += a.oxi_sang[n_sang];
 		n_sang++;
 	}
 	return a;
