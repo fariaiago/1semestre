@@ -4,13 +4,15 @@
 int main(void)
 {
 	int n_atend = 0;
-	char nome[16];
-	while(strcmp(nome, "fim") != 0 && n_atend < 50)
-	{
 
+	while(n_atend < 50)
+	{
+		char nome[16];
 		printf("Qual a próxima pessoa a ser atendida? ");
-		scanf(" %s ", nome);
-		printf("A senha de %s é %2.d\n", nome, n_atend);
+		scanf(" %s", nome);
+		if(strcmp(nome, "fim") == 0)break;
+
+		printf("A senha de %s é %.3i\n", nome, n_atend);
 		n_atend++;
 	}
 
