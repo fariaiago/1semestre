@@ -4,7 +4,7 @@ int main(int argc, char *argv[])
 {
 	if(argc == 1)
 	{
-		printf("Uso: ./7 <Presença> <de 'uma> <turma> <...>\n");
+		printf("Uso: ./7 <Presença> <de uma> <turma> <...>\n");
 		return 1;
 	}
 	int n_prsnç = 0;
