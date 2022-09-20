@@ -9,8 +9,6 @@ int main(void)
 		printf("Qual a próxima pessoa a ser atendida? ");
 		scanf(" %s ", nome);
 		printf("%s, senha %2d", nome, n_atend);
-		printf("Continuar? ");
-		scanf(" %d ", &cntnr);
 		n_atend++;
 	}
 	while(cntnr && n_atend < 50);
