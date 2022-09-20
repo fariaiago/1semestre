@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 	int n_prsnç = 0;
 	for(int i = 1; i < argc; i++)
 	{
-		char prsnç = *(argv[i]);
+		char *turma = argv[i];
 		n_prsnç += prsnç == 'P' || prsnç == 'p' ? 1 : 0;
 	}
  	printf("Presença: %f%%.\n", (1.0*n_prsnç)/(1.0*argc)*100.0);
