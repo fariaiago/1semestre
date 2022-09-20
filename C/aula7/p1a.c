@@ -24,12 +24,12 @@ atleta criar_atleta(int i)
 
 	int n_sang = 0;
 	float sm_sang = 0.0;
-	while(n_sang < 8)
+	while(n_sang < 9)
 	{
 		scanf(" %f", &(a.oxi_sang[n_sang]));
-		if(a.oxi_sang[n_sang] == -1)
+		if(a.oxi_sang[n_sang] == -1 || n_sang == 8)
 		{
-			a.oxi_sang[n_sang] = 
+			a.oxi_sang[n_sang] = sm_sang
 			break;
 		}
 		n_sang++;
