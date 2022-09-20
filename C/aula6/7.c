@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 			n_ausc += turma[cnt] == 'A' || turma[cnt] == 'a' ? 1 : 0;
 			n_alnos++;
 		}
-		if()
+		if(n_ausc/n_alnos)
 		printf("Turma %d° teve ausencia superior a 5%(%f)\n", i);
 	}
  	printf("Presença: %f%%.\n", (1.0*n_prsnç)/(1.0*argc)*100.0);
