@@ -6,7 +6,7 @@ int main(void)
 	do
 	{
 		char nome[16];
-		printf("Qual a prossima pessoa a ser atendida? ");
+		printf("Qual a próxima pessoa a ser atendida? ");
 		scanf(" %s ", nome);
 		printf("%s, senha %2d", nome, n_atend);
 		printf("Continuar? ");
