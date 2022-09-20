@@ -13,14 +13,13 @@ int main(int argc, char *argv[])
 		float n_alnos = 0, n_ausc = 0;
 		char *turma = argv[i];
 		int cnt = -1;
-		while(turma[cnt++])
+		while(turma[++cnt])
 		{
 			n_ausc += turma[cnt] == 'A' || turma[cnt] == 'a' ? 1 : 0;
 			n_alnos++;
 		}
-		if((n_ausc/n_alnos)*100.0f >= 5)
-			printf("Turma %d° teve ausencia superior a 5%(%f)\n", i, (n_ausc/n_alnos)*100.0f);
+		if((n_ausc/n_alnos)*100.0 >= 5)
+			printf("Turma %d° teve ausencia superior a 5%%(%f%%)\n", i, (n_ausc/n_alnos)*100.0);
 	}
- 	printf("Presença: %f%%.\n", (1.0*n_prsnç)/(1.0*argc)*100.0);
 	return 0;
 }
