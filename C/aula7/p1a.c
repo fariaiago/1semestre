@@ -26,6 +26,7 @@ atleta criar_atleta(int i)
 	while(n_sang < 8)
 	{
 		scanf(" %f", &(a.oxi_sang[n_sang]));
+		if(a.oxi_sang[n_sang] == -1)break;
 		n_sang++;
 	}
 	return a;
