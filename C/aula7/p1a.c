@@ -7,7 +7,7 @@ typedef struct atleta
 	float freq_card[8];
 } atleta;
 
-atleta criar_atleta();
+atleta criar_atleta(int);
 
 int main(void)
 {
@@ -16,8 +16,16 @@ int main(void)
 		atletas[i] = criar_atleta();
 }
 
-atleta criar_atleta()
+atleta criar_atleta(int i)
 {
 	atleta a;
-	
+	printf("Registre as informações do atleta %i\n", i);
+	printf("Concentração de oxigênio no sangue(-1 para sair):\n");
+
+	int n_sang = 0;
+	while(n_sang < 9)
+	{
+		scanf("");
+		n_sang++;
+	}
 }
