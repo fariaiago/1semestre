@@ -1,16 +1,18 @@
 #include <stdio.h>
+#include <string.h>
 
 int main(void)
 {
-	int n_atend = 0, cntnr = 0;
-	do
+	int n_atend = 0;
+	char nome[16];
+	while(strcpr(nome, "fim") != 0 && n_atend < 50)
 	{
-		char nome[16];
+
 		printf("Qual a próxima pessoa a ser atendida? ");
 		scanf(" %s ", nome);
-		printf("%s, senha %2d", nome, n_atend);
+		printf("A senha de %s é %2.d", nome, n_atend);
 		n_atend++;
 	}
-	while(cntnr && n_atend < 50);
+
 	return 0;
 }
