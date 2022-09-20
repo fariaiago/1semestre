@@ -13,14 +13,14 @@ int main(void)
 {
 	atleta atletas[10];
 	for(int i = 0; i < 10; i++)
-		atletas[i] = criar_atleta(i);
+		atletas[i] = criar_atleta(i+1);
 }
 
 atleta criar_atleta(int i)
 {
 	atleta a;
-	printf("Registre as informações do atleta %i\n", i);
-	printf("Concentração de oxigênio no sangue(-1 para sair):\n");
+	printf("Registre as informações do atleta %i\n"
+			"Concentração de oxigênio no sangue(-1 para sair):\n", i);
 
 	int n_sang = 0;
 	while(n_sang < 8)
