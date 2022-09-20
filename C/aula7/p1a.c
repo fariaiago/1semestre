@@ -23,7 +23,7 @@ atleta criar_atleta(int i)
 	printf("Concentração de oxigênio no sangue(-1 para sair):\n");
 
 	int n_sang = 0;
-	while(n_sang < 9)
+	while(n_sang < 8)
 	{
 		scanf(" %f", &(a.oxi_sang[n_sang]));
 		n_sang++;
