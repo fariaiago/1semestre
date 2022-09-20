@@ -13,7 +13,7 @@ int main(void)
 {
 	atleta atletas[10];
 	for(int i = 0; i < 10; i++)
-		atletas[i] = criar_atleta();
+		atletas[i] = criar_atleta(i);
 }
 
 atleta criar_atleta(int i)
@@ -25,7 +25,7 @@ atleta criar_atleta(int i)
 	int n_sang = 0;
 	while(n_sang < 9)
 	{
-		scanf(" %i", &(a.oxi_sang[n_sang]));
+		scanf(" %f", &(a.oxi_sang[n_sang]));
 		n_sang++;
 	}
 	return a;
