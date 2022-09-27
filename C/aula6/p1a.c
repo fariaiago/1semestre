@@ -22,13 +22,12 @@ atleta criar_atleta(int i, int *n_sang_mnr86, int *n_idd_mnr16, int *n_idd_mr25)
 	atleta a;
 	int idade;
 	printf("Registre as informações do atleta %i\n"
-			"Idade do atleta:\n"
-			"Concentração de oxigênio no sangue(-1 para sair):\n", i);
-
+			"Idade do atleta:\n", i);
 	scanf(" %d", &idade);
-	
+
 	int n_sang = 0;
 	float sm_sang = 0.0;
+	print("Concentração de oxigênio no sangue(-1 para sair):\n");
 	while(n_sang < 9)
 	{
 		scanf(" %f", &(a.oxi_sang[n_sang]));
