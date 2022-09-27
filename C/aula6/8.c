@@ -22,6 +22,6 @@ int main(void)
 		if(pluv > i_pluvio)i_pluvio = pluv;
 	}
 
-	printf("Média de temperaturas: %f,maior indice pluviométrico: %f", md_temp/n_temp, i_pluvio);
+	printf("Média de temperaturas: %f, maior indice pluviométrico: %f\n", md_temp/n_temp, i_pluvio);
 	return 0;
 }
