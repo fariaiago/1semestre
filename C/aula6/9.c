@@ -12,9 +12,12 @@ int main(int argc, char *argv[])
 	int n_filhos = atoi(argv[2]);
 
 	//Desconto imposto
-	valor = valor > 3000 ? valor * 1.1 : valor * 1.05;
+	valor = salario > 3000 ? valor * 1.1 : valor * 1.05;
 
 	//
-	
+	if(salario <= 1000)
+	{
+		
+	}
 	return 0;
 }
