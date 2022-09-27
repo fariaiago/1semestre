@@ -7,21 +7,26 @@ typedef struct atleta
 	float freq_card[8];
 } atleta;
 
-atleta criar_atleta(int);
+atleta criar_atleta(int, int*, int*, int*);
 
 int main(void)
 {
+	int n_sang_mnr86 = 0, n_idd_mnr16 = 0, n_idd_mr25 = 0;
 	atleta atletas[10];
 	for(int i = 0; i < 10; i++)
-		atletas[i] = criar_atleta(i+1);
+		atletas[i] = criar_atleta(i+1, &n_sang_mnr86, &n_idd_mnr16, &n_idd_mr25);
 }
 
-atleta criar_atleta(int i)
+atleta criar_atleta(int i, int *n_sang_mnr86, int *n_idd_mnr16, int *n_idd_mr25)
 {
 	atleta a;
+	int idade;
 	printf("Registre as informações do atleta %i\n"
+			"Idade do atleta:\n"
 			"Concentração de oxigênio no sangue(-1 para sair):\n", i);
 
+	scanf(" %d", &idade);
+	
 	int n_sang = 0;
 	float sm_sang = 0.0;
 	while(n_sang < 9)
