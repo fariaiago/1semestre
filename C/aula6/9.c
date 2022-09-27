@@ -17,7 +17,15 @@ int main(int argc, char *argv[])
 	//
 	if(salario <= 1000)
 	{
-		
+		valor += 300;
 	}
+	else if(salario <= 3000)
+	{
+		valor += 150;
+	}
+
+	valor += 200*n_filhos;
+
+	printf("Valor a receber: %f\n", valor);
 	return 0;
 }
