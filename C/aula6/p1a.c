@@ -24,6 +24,7 @@ atleta criar_atleta(int i, int *n_sang_mnr86, int *n_idd_mnr16, int *n_idd_mr25)
 	printf("Registre as informações do atleta %i\n"
 			"Idade do atleta:\n", i);
 	scanf(" %d", &idade);
+	a.idade = idade;
 	*n_idd_mnr16 += idade < 16 ? 1 : 0;
 	*n_idd_mr25 += idade > 25 ? 1 : 0;
 
