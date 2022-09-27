@@ -8,6 +8,13 @@ int main(int argc, char *argv[])
 		printf("Uso: ./9 <Salário> <Número de filhos>\n");
 		return 1;
 	}
-	float salario = atof(argv[1]);
+	float salario = atof(argv[1]), valor = salario;
 	int n_filhos = atoi(argv[2]);
+
+	//Desconto imposto
+	valor = valor > 3000 ? valor * 1.1 : valor * 1.05;
+
+	//
+	
+	return 0;
 }
