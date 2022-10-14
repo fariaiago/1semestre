@@ -9,11 +9,3 @@ int main(void)
 		scanf( "%d", &n);
 		num[i] = n;
 	}
-
-	for(int i = 0; i < 10; i++)
-	{
-		printf("%d ", num[i]);
-	}
-	printf("\n");
-	return 0;
-}
