@@ -10,14 +10,21 @@ int main(void)
 		{
 			printf("Nota do %d° aluno da %d° turma: ", j+1, i+1);
 			scanf(" %f", &(notas[i][j]));
+			if(notas[i][j] == -1)break;
 		}
 	}
 	for(int i = 0; i < 3; i++)
 	{
-		printf("-- Boletim de notas - Turma %d --\n", i+1);
+		int n_alunos = 30;
 		float md_turma = 0.0f;
+		printf("-- Boletim de notas - Turma %d --\n", i+1);
 		for(int j = 0; j < 30; j++)
 		{
+			if(notas[i][j] == -1)
+			{
+				n_alunos = j+1;
+				break;
+			}
 			printf("Aluno %d: %.1f	", j+1, notas[i][j]);
 			if((j+1) % 10 == 0)printf("\n");
 			md_turma += notas[i][j];
