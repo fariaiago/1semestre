@@ -15,5 +15,11 @@ int main(void)
 			scanf(" %d %f", &(freq[i][j]), &(sang[i][j]));
 		}
 	}
+	for(int i = 0; i < 10; i++)
+	{
+		printf("-- Relatório do Atleta %d --\n", i+1);
+		for(int j = 0; j < 8; j++)
+		{}
+	}
 	return 0;
 }
