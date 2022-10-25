@@ -18,7 +18,7 @@ int main(void)
 {84, 73, 13, 25, 59, 46, 54, 46},
 {68, 36, 79, 81, 26, 87, 65, 37},
 {13, 22, 91, 63, 36, 58, 25, 14}};
-	/*for(int i = 0; i < 10; i++)
+	for(int i = 0; i < 10; i++)
 	{
 		printf("Idade do %d° atleta", i+1);
 		scanf(" %d", &(idades[i]));
@@ -27,7 +27,7 @@ int main(void)
 			printf("Frequência cardiaca e nível de O2 no sangue do %d° atleta na %d° semana:", i+1, j+1);
 			scanf(" %d %f", &(freq[i][j]), &(sang[i][j]));
 		}
-	}*/
+	}
 	for(int i = 0; i < 10; i++)
 	{
 		int mr_freq = 0;
