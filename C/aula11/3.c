@@ -3,7 +3,8 @@
 int main(void)
 {
 	int idades[10];
-	int freq[10][8];
+	int freq[10][8]
+	= ,;
 	float sang[10][8];
 	for(int i = 0; i < 10; i++)
 	{
@@ -27,7 +28,7 @@ int main(void)
 			md_sangue += sang[i][j];
 		}
 		md_sangue = md_sangue/8.0f;
-		printf("Maior frequência cardiaca: %d\nMédia nivel de O2 no sangue: %f\n", )
+		printf("Maior frequência cardiaca: %d\nMédia nivel de O2 no sangue: %f\n", mr_freq, md_sangue);
 	}
 	return 0;
 }
