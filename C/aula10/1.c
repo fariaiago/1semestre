@@ -9,3 +9,4 @@ int main(void)
 		scanf( "%d", &n);
 		num[i] = n;
 	}
+}
