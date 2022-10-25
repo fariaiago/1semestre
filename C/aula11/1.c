@@ -12,5 +12,13 @@ int main(void)
 			scanf(" %d", &(idades[i][j]));
 		}
 	}
+	for(int i = 0; i < 5; i++)
+	{
+		for(int j = 0; j < 13; j++)
+		{
+			printf("Idade da %d° pessoa do %d° grupo: ", j+1, i+1);
+			scanf(" %d", &(idades[i][j]));
+		}
+	}
 	return 0;
 }
