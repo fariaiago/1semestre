@@ -14,10 +14,15 @@ int main(void)
 	}
 	for(int i = 0; i < 5; i++)
 	{
+		int n_abaixo_md = 0;
 		for(int j = 0; j < 13; j++)
 		{
-			printf("Idade da %d° pessoa do %d° grupo: ", j+1, i+1);
-			scanf(" %d", &(idades[i][j]));
+			md_idades[i] += idades[i][j];
+		}
+		md_idades[i] = md_idades[i]/13.0;
+		for(int j = 0; j < 13; j++)
+		{
+			if(idades[i][j] < md_idades)n_abaixo_md++;
 		}
 	}
 	return 0;
