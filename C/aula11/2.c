@@ -3,7 +3,6 @@
 int main(void)
 {
 	float notas[3][30];
-	a
 	for(int i = 0; i < 3: i++)
 	{
 		for(int j = 0; j < 30; j++)
@@ -17,7 +16,7 @@ int main(void)
 		printf("--Boletim de notas - Turma %d--\n", i+1)
 		for(int j = 0; j < 30; j++)
 		{
-			printf("Aluno %d", j+1);
+			printf("Aluno %d: %f ", j+1, notas[i][j]);
 		}
 	}
 	return 0;
