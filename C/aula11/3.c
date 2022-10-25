@@ -17,9 +17,11 @@ int main(void)
 	}
 	for(int i = 0; i < 10; i++)
 	{
-		printf("-- Relatório do Atleta %d --\n", i+1);
+		printf("-- Relatório do Atleta %d --\nSemana Cardio Sangue\n", i+1);
 		for(int j = 0; j < 8; j++)
-		{}
+		{
+			printf("%d %d %f", j+1, freq[i][j], sang[i][j]);
+		}
 	}
 	return 0;
 }
