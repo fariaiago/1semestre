@@ -17,7 +17,6 @@ int main(void)
 		for(int j = 0; j < 30; j++)
 		{
 			printf("Nota do %d° aluno da %d° turma: ", j+1, i+1);
-			scanf(" %d", &(notas[i][j]));
 		}
 	}
 	return 0;
