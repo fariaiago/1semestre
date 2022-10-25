@@ -17,11 +17,17 @@ int main(void)
 	}
 	for(int i = 0; i < 10; i++)
 	{
+		int mr_freq = 0;
+		float md_sangue = 0.0f;
 		printf("-- Relatório do Atleta %d --\nSemana Cardio Sangue\n", i+1);
 		for(int j = 0; j < 8; j++)
 		{
 			printf("%d %d %f", j+1, freq[i][j], sang[i][j]);
+			if(freq[i][j] > mr_freq)mr_freq = freq[i][j];
+			md_sangue += sang[i][j];
 		}
+		md_sangue = md_sangue/8.0f;
+		printf("Maior frequência cardiaca: %d\nMédia nivel de O2 no sangue: %f\n", )
 	}
 	return 0;
 }
