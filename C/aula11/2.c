@@ -20,6 +20,7 @@ int main(void)
 		for(int j = 0; j < 30; j++)
 		{
 			printf("Aluno %d: %f ", j+1, notas[i][j]);
+			if((j+1) % 10 == 0)printf("\n");
 		}
 	}
 	return 0;
