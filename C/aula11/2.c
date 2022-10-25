@@ -33,7 +33,7 @@ int main(void)
 			md_turma += notas[i][j];
 		}
 		if(n_alunos % 10 != 0)printf("\n");
-		md_turma = md_turma/30.0f;
+		md_turma = md_turma/n_alunos;
 		printf("Média da turma: %f\nAlunos acima da média:", md_turma);
 		for(int j = 0; j < 30; j++)
 		{
