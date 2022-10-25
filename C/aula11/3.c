@@ -11,7 +11,8 @@ int main(void)
 		scanf(" %d", &(idades[i]));
 		for(int j = 0; j < 8; j++)
 		{
-			
+			printf("Frequência cardiaca e nível de O2 no sangue do %d° atleta na %d° semana:", i+1, j+1);
+			scanf(" %d %f", &(freq[i][j]), &(sang[i][j]));
 		}
 	}
 	return 0;
