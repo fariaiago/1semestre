@@ -24,6 +24,7 @@ int main(void)
 		{
 			if(idades[i][j] < md_idades)n_abaixo_md++;
 		}
+		printf("Idade da %d° pessoa do %d° grupo: ", i+1);
 	}
 	return 0;
 }
