@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-
 int main(void)
 {
-	a
+	int idades[10];
+	
 	return 0;
 }
