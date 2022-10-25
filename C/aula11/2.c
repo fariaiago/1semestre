@@ -25,7 +25,11 @@ int main(void)
 			md_turma += notas[i][j];
 		}
 		md_turma = md_turma/30.0f;
-		printf("Média da turma: %f\n", md_turma);
+		printf("Média da turma: %f\nAlunos acima da média: ", md_turma);
+		for(int j = 0; j < 30; j++)
+		{
+			if(notas[i][j] > md_turma)printf(Aluno %d)
+		}
 	}
 	return 0;
 }
