@@ -19,5 +19,13 @@ int main(void)
 		//Vaxx por dia
 		dia[i] = p0 + p1 + p2 + p3 + p4;
 	}
+	do
+	{
+		int relatorio = 0;
+		printf("Mostrar relatório de vacinações:\n\"0\" = por posto, \"1\" = por dia e \"2\" = por mês");
+		scanf(" %d", &relatorio);
+		s
+	}
+	while();
 	return 0;
 }
