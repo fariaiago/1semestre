@@ -4,7 +4,7 @@ void tabela(char *, int[], int);
 
 int main(void)
 {
-	int vaxx[5][20][4]
+	int vaxx[4][5][20]
 	={{{71, 65, 75, 68, 95, 45, 100, 34, 99, 30, 61, 41, 84, 69, 32, 91, 87, 95, 56, 39},
 {80, 46, 8, 97, 94, 49, 69, 14, 9, 74, 53, 36, 73, 10, 79, 86, 93, 49, 26, 13},
 {32, 64, 87, 46, 8, 80, 71, 88, 28, 29, 57, 35, 63, 42, 80, 75, 57, 78, 94, 81},
@@ -31,7 +31,7 @@ int main(void)
 		for(int j = 0; j < 20; j++)
 		{
 			//int p0 = 0, p1 = 0, p2 = 0, p3 = 0, p4 = 0;
-			int p0 = vaxx[0][j][i], p1 = vaxx[1][j][i], p2 = vaxx[2][j][i], p3 = vaxx[3][j][i], p4 = vaxx[4][j][i];
+			int p0 = vaxx[0][i][j], p1 = vaxx[1][i][j], p2 = vaxx[2][j][i], p3 = vaxx[3][j][i], p4 = vaxx[4][j][i];
 			//printf("Vacinações no %d° dia do %d° mês: ", j+1, i+1);
 			//scanf(" %d %d %d %d %d", &p0, &p1, &p2, &p3, &p4);
 			//Vaxx por posto
