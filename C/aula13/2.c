@@ -42,7 +42,7 @@ int main(void)
 			posto[4] += p4;
 
 			//Vaxx por dia
-			dia[j] = p0 + p1 + p2 + p3 + p4;
+			dia[j] += p0 + p1 + p2 + p3 + p4;
 
 			//Vaxx por mês
 			mes[i] += p0 + p1 + p2 + p3 + p4;
