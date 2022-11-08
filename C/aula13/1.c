@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+void tabela(char *, int[], int);
+
 int main(void)
 {
 	int vaxx[5][20], posto[5], dia[20];
@@ -8,7 +10,7 @@ int main(void)
 	{
 		int p0 = 0, p1 = 0, p2 = 0, p3 = 0, p4 = 0;
 		printf("Vacinações no %d° dia: ", i+1);
-		scanf(" %d %d %d %d ", &p0, &p1, &p2, &p3, &p4);
+		scanf(" %d %d %d %d %d", &p0, &p1, &p2, &p3, &p4);
 		//Vaxx por posto
 		posto[0] += p0;
 		posto[1] += p1;
@@ -19,6 +21,7 @@ int main(void)
 		//Vaxx por dia
 		dia[i] = p0 + p1 + p2 + p3 + p4;
 	}
+	int outro = 0;
 	do
 	{
 		int relatorio = 0;
@@ -27,19 +30,24 @@ int main(void)
 		switch(relatorio)
 		{
 			case 0:
-				nfor(f);
+				tabela("Vacinações(por posto):", posto, 5);
 			case 1:
+				tabela("Vacinações(por dia):", dia, 20);
 			case 2:
+				tabela("Vacinações(total):", &total, 1);
 		}
+		printf("Outro relatorio? \"0\" não, \"1\" sim: ");
+		scanf(" %d", &outro);
 	}
-	while();
+	while(outro);
 	return 0;
 }
 
-void nfor(char *texto, int[] vet, int n)
+void tabela(char *titulo, int[] vet, int n)
 {
+	printf("%s\n", titulo);
 	for(int i = 0; i < n; n++)
 	{
-		printf("%s :%d", texto, i+1, vet[i]);
+		printf("|%d	%d|", i+1, vet[i]);
 	}
 }
