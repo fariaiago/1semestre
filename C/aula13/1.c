@@ -22,7 +22,7 @@ int main(void)
 		dia[i] = p0 + p1 + p2 + p3 + p4;
 
 		//Vaxx total
-		total[0] += p0 + p1 + p2 + p3 + p4;
+		total[0] += dia[i];
 	}
 	int outro = 0;
 	do
