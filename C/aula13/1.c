@@ -5,7 +5,7 @@ void tabela(char *, int[], int);
 int main(void)
 {
 	int vaxx[5][20], posto[5], dia[20];
-	int total;
+	int total[1];
 	for(int i = 0; i < 20; i++)
 	{
 		int p0 = 0, p1 = 0, p2 = 0, p3 = 0, p4 = 0;
@@ -20,6 +20,9 @@ int main(void)
 
 		//Vaxx por dia
 		dia[i] = p0 + p1 + p2 + p3 + p4;
+
+		//Vaxx total
+		total[0] += p0 + p1 + p2 + p3 + p4;
 	}
 	int outro = 0;
 	do
@@ -34,7 +37,7 @@ int main(void)
 			case 1:
 				tabela("Vacinações(por dia):", dia, 20);
 			case 2:
-				tabela("Vacinações(total):", &total, 1);
+				tabela("Vacinações(total):", total, 1);
 		}
 		printf("Outro relatorio? \"0\" não, \"1\" sim: ");
 		scanf(" %d", &outro);
@@ -43,7 +46,7 @@ int main(void)
 	return 0;
 }
 
-void tabela(char *titulo, int[] vet, int n)
+void tabela(char *titulo, int vet[], int n)
 {
 	printf("%s\n", titulo);
 	for(int i = 0; i < n; n++)
