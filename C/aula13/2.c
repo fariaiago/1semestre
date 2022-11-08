@@ -31,7 +31,7 @@ int main(void)
 		for(int j = 0; j < 20; j++)
 		{
 			//int p0 = 0, p1 = 0, p2 = 0, p3 = 0, p4 = 0;
-			int p0 = vaxx[0][i][j], p1 = vaxx[1][i][j], p2 = vaxx[2][j][i], p3 = vaxx[3][j][i], p4 = vaxx[4][j][i];
+			int p0 = vaxx[j][0][i], p1 = vaxx[j][1][i], p2 = vaxx[j][2][i], p3 = vaxx[3][j][i], p4 = vaxx[4][j][i];
 			//printf("Vacinações no %d° dia do %d° mês: ", j+1, i+1);
 			//scanf(" %d %d %d %d %d", &p0, &p1, &p2, &p3, &p4);
 			//Vaxx por posto
