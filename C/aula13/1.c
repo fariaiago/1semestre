@@ -24,8 +24,22 @@ int main(void)
 		int relatorio = 0;
 		printf("Mostrar relatório de vacinações:\n\"0\" = por posto, \"1\" = por dia e \"2\" = por mês");
 		scanf(" %d", &relatorio);
-		s
+		switch(relatorio)
+		{
+			case 0:
+				nfor(f);
+			case 1:
+			case 2:
+		}
 	}
 	while();
 	return 0;
+}
+
+void nfor(char *texto, int[] vet, int n)
+{
+	for(int i = 0; i < n; n++)
+	{
+		printf("%s :%d", texto, i+1, vet[i]);
+	}
 }
