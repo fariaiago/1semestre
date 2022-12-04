@@ -1,9 +1,14 @@
 #include <stdio.h>
 
-enum tipos_de_produtos {AC3 , AC2 , REJUNTE}
+//Tipos de produtos disponíveis
+enum produtos {AC3 , AC2 , REJUNTE}
 
 //Struct para representar um pedido
-typedef struct produto
+typedef struct pedido
+{
+	enum produtos tipo;
+	int quantidade;
+} pedido;
 int main(void)
 {
 	//Ler CSV e transforma-lo em matrix
