@@ -30,9 +30,9 @@ int main(void)
 				printf("Digite o número do cliente e do pedido, respectivamente: ");
 				scanf(" %d %d", &cliente, &pedido);
 				break;
-			case 0:
+			case 1:
 				break;
-			case 0:
+			case 2:
 				break;
 			default:
 				printf("Erro, valor inválido.\n");
