@@ -51,7 +51,7 @@ int main(void)
 					scanf(" %d", &cliente);
 					for(int i = 0; i < n_pedidos[cliente])
 					{
-						soma_peso += pedidos[cliente][i];
+						soma_peso += calc_peso(pedidos[cliente][i].tipo, pedidos[cliente][i].quantidade);
 					}
 					printf("Relatório de cliente #%d\nTipo de produto: %s\nQuantidade: %d\nDestino: %s\nFrete: R$%d\n",
 						cliente, tipos_para_texto(pd.tipo), pd.quantidade, locais_para_texto(pd.destino), calc_frete(pd.destino, pd.tipo, pd.quantidade));
