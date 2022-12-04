@@ -42,7 +42,15 @@ int main(void)
 					break;
 				}
 			case 1:
-				break;
+				{
+					int cliente = 0;
+					printf("Digite o número do cliente e do pedido, respectivamente: ");
+					scanf(" %d %d", &cliente);
+					pedido pd = pedidos[cliente][n_pedido];
+					printf("Relatório de cliente #%d\nTipo de produto: %s\nQuantidade: %d\nDestino: %s\nFrete: R$%d\n",
+						cliente, tipos_para_texto(pd.tipo), pd.quantidade, locais_para_texto(pd.destino), calc_frete(pd.destino, pd.tipo, pd.quantidade));
+					break;
+				}
 			case 2:
 				break;
 			default:
