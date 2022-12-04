@@ -14,10 +14,12 @@ typedef struct pedido
 	int quantidade;
 } pedido;
 
+pedido *ler_dados(char*);
+
 int main(void)
 {
 	//Ler CSV e transforma-lo em matrix
-	pedido pedidos[2][10] = ler_dados();
+	pedido *pedidos[2] = ler_dados("Blah");
 	do
 	{
 		int tipo_relatorio = 0;
