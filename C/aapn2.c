@@ -15,6 +15,7 @@ typedef struct pedido
 } pedido;
 
 pedido (*ler_dados(pedido [][10],char*))[10];
+int calc_frete(int, int, int);
 char *tipos_para_texto(int);
 char *locais_para_texto(int);
 
@@ -36,8 +37,8 @@ int main(void)
 					printf("Digite o número do cliente e do pedido, respectivamente: ");
 					scanf(" %d %d", &cliente, &n_pedido);
 					pedido pd = pedidos[cliente][n_pedido];
-					printf("Relatório de pedido #%d-%d\nTipo de produto: %s\nQuantidade: %d\nDestino: %s\nFrete: %%f\n",
-						cliente, n_pedido, tipos_para_texto(pd.tipo), pd.quantidade, locais_para_texto(pd.destino), calc_frete(pd.tipo, pd.quantidade));
+					printf("Relatório de pedido #%d-%d\nTipo de produto: %s\nQuantidade: %d\nDestino: %s\nFrete: %d\n",
+						cliente, n_pedido, tipos_para_texto(pd.tipo), pd.quantidade, locais_para_texto(pd.destino), calc_frete(pd.destino, pd.tipo, pd.quantidade));
 					break;
 				}
 			case 1:
@@ -59,17 +60,26 @@ pedido (*ler_dados(pedido pedidos[][10], char *arquivo))[10]
 	pedido pd;
 	pd.tipo = AC3;
 	pd.destino = PALMAS;
-	pd.quantidade = 10;
-	//pedido pedidos[2][10];
+	pd.quantidade = 100;
 	pedidos[0][0] = pd;
 	return pedidos;
 }
 
-int calc_frete(int tipo, int quantidade)
+int calc_frete(int destino, int tipo, int quantidade)
 {
 	int peso = (tipo != 2 ? 20 : 5)*quantidade;
-	
-	return
+	if(peso <= 1000)
+	{
+		return 0;
+	}
+	else if(peso < 2000)
+	{
+		return 100 + 100 * destino;
+	}
+	else
+	{
+		return 2 * quantidade;
+	}
 }
 
 char *tipos_para_texto(int tipo)
