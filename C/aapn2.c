@@ -62,3 +62,33 @@ pedido (*ler_dados(pedido pedidos[][10], char *arquivo))[10]
 	pedidos[0][0] = pd;
 	return pedidos;
 }
+
+char *tipos_para_texto(int tipo)
+{
+	switch(tipo)
+	{
+		case 0:
+			return "AC3";
+		case 1:
+			return "AC2";
+		case 2:
+			return "Rejunte";
+		default:
+			return "Inválido";
+	}
+}
+
+char *tipos_para_texto(int tipo)
+{
+	switch(tipo)
+	{
+		case 0:
+			return "AC3";
+		case 1:
+			return "AC2";
+		case 2:
+			return "Rejunte";
+		default:
+			return "Inválido";
+	}
+}
