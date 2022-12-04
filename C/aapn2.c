@@ -46,15 +46,16 @@ int main(void)
 				}
 			case 1:
 				{
-					int cliente = 0, soma_peso = 0
+					int cliente = 0;
+					float soma_peso = 0;
 					printf("Digite o número do cliente: ");
 					scanf(" %d", &cliente);
 					for(int i = 0; i < n_pedidos[cliente])
 					{
 						soma_peso += calc_peso(pedidos[cliente][i].tipo, pedidos[cliente][i].quantidade);
 					}
-					printf("Relatório de cliente #%d\nTipo de produto: %s\nQuantidade: %d\nDestino: %s\nFrete: R$%d\n",
-						cliente, tipos_para_texto(pd.tipo), pd.quantidade, locais_para_texto(pd.destino), calc_frete(pd.destino, pd.tipo, pd.quantidade));
+					printf("Relatório de cliente #%d\nNúmero de pedidos: %d\nMédia de peso dos pedidos: R$%d\n",
+						cliente, n_pedidos[cliente], soma_peso/(1.0*n_pedidos[cliente]));
 					break;
 				}
 			case 2:
