@@ -60,7 +60,7 @@ int main(void)
 				}
 			case 2:
 				{
-					float soma_peso = 0;
+					int soma_peso = 0;
 					for(int i = 0; i < 2; i++)
 					{
 						for(int j = 0; j < n_pedidos[cliente]; j++)
