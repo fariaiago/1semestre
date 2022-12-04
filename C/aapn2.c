@@ -71,7 +71,7 @@ pedido (*ler_dados(pedido pedidos[][10], int n_pedidos[], char *arquivo))[10]
 	while(fgets(buffer, 128, csv))
 	{
 		int cliente = 0, tipo = 0, destino = 0, quantidade = 0;
-		sscanf(buffer, "%d %d %d %d", &cliente, &tipo, &destino, &quantidade);
+		sscanf(buffer, "%d,%d,%d,%d", &cliente, &tipo, &destino, &quantidade);
 		pedido pd;
 		printf("%d %d %d %d\n", cliente, tipo, destino, quantidade);
 		pd.tipo = tipo;
