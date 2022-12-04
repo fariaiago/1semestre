@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 //Tipos de produtos disponíveis
 enum produtos {AC3 , AC2 , REJUNTE};
 
@@ -72,7 +72,7 @@ pedido (*ler_dados(pedido pedidos[][10], int n_pedidos[], char *arquivo))[10]
 	{
 		int cliente = 0, tipo = 0, destino = 0, quantidade = 0;
 		sscanf(buffer, "%d %d %d %d", &cliente, &tipo, &destino, &quantidade);
-		pedido pd;
+		pedido pd = malloc(sizeof(pedido));
 		printf("%lu\n", sizeof(pd));
 		pd.tipo = tipo;
 		pd.destino = destino;
