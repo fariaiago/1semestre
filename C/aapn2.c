@@ -65,6 +65,8 @@ int main(void)
 					{
 						for(int j = 0; j < n_pedidos[cliente]; j++)
 						{
+							int peso = calc_peso(pedidos[cliente][i].tipo, pedidos[cliente][i].quantidade);
+							soma_peso += peso;
 						}
 					}
 				}
