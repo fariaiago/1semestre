@@ -17,6 +17,7 @@ typedef struct pedido
 
 void ler_dados(pedido [][10], int*, char*);
 int calc_frete(int, int, int);
+int calc_peso(int, int);
 char *tipos_para_texto(int);
 char *locais_para_texto(int);
 
@@ -86,7 +87,7 @@ void ler_dados(pedido pedidos[][10], int n_pedidos[], char *arquivo)
 
 int calc_frete(int destino, int tipo, int quantidade)
 {
-	int peso = (tipo != 2 ? 20 : 5)*quantidade;
+	int peso = calc_peso(tipo, quantidade);
 	if(peso <= 1000)
 	{
 		return 0;
@@ -99,6 +100,11 @@ int calc_frete(int destino, int tipo, int quantidade)
 	{
 		return 2 * quantidade;
 	}
+}
+
+int calc_peso(int tipo, int quantidade)
+{
+	return (tipo != 2 ? 20 : 5)*quantidade;
 }
 
 char *tipos_para_texto(int tipo)
