@@ -23,7 +23,7 @@ int main(void)
 {
 	//Ler CSV e transforma-lo em matrix
 	pedido pedidos[2][10];
-	ler_dados(pedidos, "Blah");
+	ler_dados(pedidos, "pedidos.csv");
 	do
 	{
 		int tipo_relatorio = 0;
@@ -64,7 +64,7 @@ int main(void)
 
 pedido (*ler_dados(pedido pedidos[][10], char *arquivo))[10]
 {
-	//FILE *csv = fopen(arquivo, 'r');
+	FILE *csv = fopen(arquivo, 'r');
 	pedido pd;
 	pd.tipo = AC3;
 	pd.destino = PALMAS;
