@@ -54,7 +54,7 @@ int main(void)
 					{
 						soma_peso += calc_peso(pedidos[cliente][i].tipo, pedidos[cliente][i].quantidade);
 					}
-					printf("Relatório de cliente #%d\n|Número de pedidos:\t\t\t%d|\n|Média de peso dos pedidos:\t%f|\n",
+					printf("Relatório de cliente #%d\n|Número de pedidos:\t\t\t %d|\n|Média de peso dos pedidos: \t%f|\n",
 						cliente, n_pedidos[cliente], soma_peso/(1.0*n_pedidos[cliente]));
 					break;
 				}
