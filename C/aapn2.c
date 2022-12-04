@@ -45,10 +45,11 @@ int main(void)
 				{
 					int cliente = 0;
 					printf("Digite o número do cliente e do pedido, respectivamente: ");
-					scanf(" %d %d", &cliente);
-					pedido pd = pedidos[cliente][n_pedido];
+					scanf(" %d", &cliente);
+					pedido pd = pedidos[cliente][0];
 					printf("Relatório de cliente #%d\nTipo de produto: %s\nQuantidade: %d\nDestino: %s\nFrete: R$%d\n",
 						cliente, tipos_para_texto(pd.tipo), pd.quantidade, locais_para_texto(pd.destino), calc_frete(pd.destino, pd.tipo, pd.quantidade));
+					int leng = sizeof(pedidos) / sizeof(pedidos[0][0]);
 					break;
 				}
 			case 2:
