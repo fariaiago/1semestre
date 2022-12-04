@@ -47,7 +47,7 @@ int main(void)
 				break;
 		}
 	}
-	while(1); //Fazer outro caso o usuário quiser
+	while(0); //Fazer outro caso o usuário quiser
 	return 0;
 }
 
