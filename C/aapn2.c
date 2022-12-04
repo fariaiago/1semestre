@@ -26,10 +26,12 @@ int main(void)
 		switch(tipo_relatorio)
 		{
 			case 0:
-				int cliente = 0, pedido = 0;
+				int cliente = 0, n_pedido = 0;
 				printf("Digite o número do cliente e do pedido, respectivamente: ");
-				scanf(" %d %d", &cliente, &pedido);
-				func("Relatório do pedido #");
+				scanf(" %d %d", &cliente, &n_pedido);
+				pedido pd = pedidos[cliente][n_pedido];
+				printf("Relatório de pedido #%d-%d\nTipo de produto: %d\nQuantidade: %d\nDestino: %d\nFrete: \%f\n",
+					cliente, n_pedido, pd.tipo, pd.quatidade, pd.destino);
 				break;
 			case 1:
 				break;
