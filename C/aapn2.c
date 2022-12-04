@@ -26,8 +26,9 @@ int main(void)
 		switch(tipo_relatorio)
 		{
 			case 0:
-				printf("");
-				scanf();
+				int cliente = 0, pedido = 0;
+				printf("Digite o número do cliente e do pedido, respectivamente: ");
+				scanf(" %d %d", &cliente, &pedido);
 				break;
 			case 0:
 				break;
