@@ -26,7 +26,7 @@ int main(void)
 	pedido pedidos[2][10];
 	int n_pedidos[2];
 	int repetir = 0;
-	
+
 	//Ler dados do CSV e coloca-os numa matrix
 	ler_dados(pedidos, n_pedidos, "pedidos.csv");
 	do
@@ -96,8 +96,10 @@ void ler_dados(pedido pedidos[][10], int n_pedidos[], char *arquivo)
 {
 	FILE *csv = fopen(arquivo, "r");
 	char buffer[128];
+
+	//Pula a primeira linha
 	fgets(buffer, 128, csv);
-	while(fgets(buffer, 128, csv))
+	while(fgets(buffer, 128, csv) != NULL)
 	{
 		int cliente = 0, tipo = 0, destino = 0, quantidade = 0;
 		sscanf(buffer, "%d,%d,%d,%d", &cliente, &tipo, &destino, &quantidade);
@@ -128,11 +130,13 @@ int calc_frete(int destino, int tipo, int quantidade)
 	}
 }
 
+//Calcula o peso de um pedido
 int calc_peso(int tipo, int quantidade)
 {
 	return (tipo != 2 ? 20 : 5)*quantidade;
 }
 
+//Retorna
 char *tipos_para_texto(int tipo)
 {
 	switch(tipo)
