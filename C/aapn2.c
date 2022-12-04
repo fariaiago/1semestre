@@ -15,6 +15,8 @@ typedef struct pedido
 } pedido;
 
 pedido (*ler_dados(pedido [][10],char*))[10];
+char *tipos_para_texto(int);
+char *locais_para_texto(int);
 
 int main(void)
 {
@@ -34,8 +36,8 @@ int main(void)
 					printf("Digite o número do cliente e do pedido, respectivamente: ");
 					scanf(" %d %d", &cliente, &n_pedido);
 					pedido pd = pedidos[cliente][n_pedido];
-					printf("Relatório de pedido #%d-%d\nTipo de produto: %d\nQuantidade: %d\nDestino: %d\nFrete: %%f\n",
-						cliente, n_pedido, pd.tipo, pd.quantidade, pd.destino);
+					printf("Relatório de pedido #%d-%d\nTipo de produto: %s\nQuantidade: %d\nDestino: %s\nFrete: %%f\n",
+						cliente, n_pedido, tipos_para_texto(pd.tipo), pd.quantidade, locais_para_texto(pd.destino), calc_frete(pd.tipo, pd.quantidade));
 					break;
 				}
 			case 1:
@@ -63,19 +65,10 @@ pedido (*ler_dados(pedido pedidos[][10], char *arquivo))[10]
 	return pedidos;
 }
 
-char *tipos_para_texto(int tipo)
+int calc_frete(int tipo, int quantidade)
 {
-	switch(tipo)
-	{
-		case 0:
-			return "AC3";
-		case 1:
-			return "AC2";
-		case 2:
-			return "Rejunte";
-		default:
-			return "Inválido";
-	}
+	int peso = (tipo != 2 ? 20 : 5)*quantidade;
+	return
 }
 
 char *tipos_para_texto(int tipo)
@@ -89,6 +82,19 @@ char *tipos_para_texto(int tipo)
 		case 2:
 			return "Rejunte";
 		default:
-			return "Inválido";
+			return "Produto inválido";
+	}
+}
+
+char *locais_para_texto(int destino)
+{
+	switch(destino)
+	{
+		case 0:
+			return "Palmas";
+		case 1:
+			return "Porto Nacional";
+		default:
+			return "Local inválido";
 	}
 }
