@@ -21,7 +21,7 @@ int main(void)
 	//Ler CSV e transforma-lo em matrix
 	pedido pedidos[2][10];
 	ler_dados(pedidos, "Blah");
-	dode
+	do
 	{
 		int tipo_relatorio = 0;
 		printf("Qual tipo de relatório deseja fazer?\n\"0\" para por pedido, \"1\" para por cliente e \"2\" para geral.\n");
