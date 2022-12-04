@@ -14,7 +14,7 @@ typedef struct pedido
 	int quantidade;
 } pedido;
 
-pedido [][]ler_dados(pedido [2][10],char*);
+pedido *ler_dados(pedido [][10],char*)[10];
 
 int main(void)
 {
@@ -51,7 +51,7 @@ int main(void)
 	return 0;
 }
 
-pedido [][]ler_dados(pedido pedidos[][], char *arquivo)
+pedido *ler_dados(pedido pedidos[][10], char *arquivo)[10]
 {
 	//FILE *csv = fopen(arquivo, 'r');
 	pedido pd;
