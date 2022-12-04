@@ -14,7 +14,7 @@ typedef struct pedido
 	int quantidade;
 } pedido;
 
-pedido (*ler_dados(pedido [][10],char*))[10];
+pedido (*ler_dados(pedido [][10], int*, char*))[10];
 int calc_frete(int, int, int);
 char *tipos_para_texto(int);
 char *locais_para_texto(int);
@@ -23,7 +23,8 @@ int main(void)
 {
 	//Ler CSV e transforma-lo em matrix
 	pedido pedidos[2][10];
-	ler_dados(pedidos, "pedidos.csv");
+	int n_pedidos = {0, 0};
+	ler_dados(pedidos, n_pedidos, "pedidos.csv");
 	do
 	{
 		int tipo_relatorio = 0;
@@ -62,20 +63,21 @@ int main(void)
 	return 0;
 }
 
-pedido (*ler_dados(pedido pedidos[][10], char *arquivo))[10]
+pedido (*ler_dados(pedido pedidos[][10], int n_pedidos[], char *arquivo))[10]
 {
 	FILE *csv = fopen(arquivo, 'r');
 	char buffer[128];
 	while(fgets(buffer, 256, csv))
 	{
 		int cliente = 0, tipo = 0, local = 0, quantidade = 0;
-		sscanf();
+		sscanf(buffer, "%d %d %d %d", &cliente, &tipo, &local, &quantidade);
+		pedido pd;
+		pd.tipo = tipo;
+		pd.destino = destino;
+		pd.quantidade = quantidade;
+		pedidos[cliente][n_pedidos] = pd;
+		n_pedidos[cliente]++;
 	}
-	pedido pd;
-	pd.tipo = AC3;
-	pd.destino = PALMAS;
-	pd.quantidade = 100;
-	pedidos[0][0] = pd;
 	return pedidos;
 }
 
