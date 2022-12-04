@@ -65,6 +65,7 @@ int main(void)
 pedido (*ler_dados(pedido pedidos[][10], char *arquivo))[10]
 {
 	FILE *csv = fopen(arquivo, 'r');
+	n
 	pedido pd;
 	pd.tipo = AC3;
 	pd.destino = PALMAS;
