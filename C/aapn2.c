@@ -54,21 +54,26 @@ int main(void)
 					{
 						soma_peso += calc_peso(pedidos[cliente][i].tipo, pedidos[cliente][i].quantidade);
 					}
-					printf("Relatório de cliente #%d\nNúmero de pedidos: %d\n|Média de peso dos pedidos: %f\n",
+					printf("Relatório de cliente #%d\nNúmero de pedidos: %d\nMédia de peso dos pedidos: %f\n",
 						cliente, n_pedidos[cliente], soma_peso/(1.0*n_pedidos[cliente]));
 					break;
 				}
 			case 2:
 				{
 					int soma_peso = 0;
+					printf("Relatório geral\n");
+					printf("Pedidos abaixo de 1000kg: ");
 					for(int i = 0; i < 2; i++)
 					{
-						for(int j = 0; j < n_pedidos[cliente]; j++)
+						for(int j = 0; j < n_pedidos[i]; j++)
 						{
-							int peso = calc_peso(pedidos[cliente][i].tipo, pedidos[cliente][i].quantidade);
+							int peso = calc_peso(pedidos[i][j].tipo, pedidos[i][j].quantidade);
 							soma_peso += peso;
+							if(peso < 1000)
+								printf("%d-%d ", i, j);
 						}
 					}
+					printf("\nPeso total das vendas: %d\n", soma_peso);
 				}
 				break;
 			default:
