@@ -23,7 +23,7 @@ int main(void)
 {
 	//Ler CSV e transforma-lo em matrix
 	pedido pedidos[2][10];
-	int n_pedidos = {0, 0};
+	int n_pedidos[] = {0, 0};
 	ler_dados(pedidos, n_pedidos, "pedidos.csv");
 	do
 	{
@@ -65,19 +65,20 @@ int main(void)
 
 pedido (*ler_dados(pedido pedidos[][10], int n_pedidos[], char *arquivo))[10]
 {
-	FILE *csv = fopen(arquivo, 'r');
+	FILE *csv = fopen(arquivo, "r");
 	char buffer[128];
-	while(fgets(buffer, 256, csv))
+	while(fgets(buffer, 128, csv))
 	{
-		int cliente = 0, tipo = 0, local = 0, quantidade = 0;
-		sscanf(buffer, "%d %d %d %d", &cliente, &tipo, &local, &quantidade);
+		int cliente = 0, tipo = 0, destino = 0, quantidade = 0;
+		sscanf(buffer, "%d %d %d %d", &cliente, &tipo, &destino, &quantidade);
 		pedido pd;
 		pd.tipo = tipo;
 		pd.destino = destino;
 		pd.quantidade = quantidade;
-		pedidos[cliente][n_pedidos] = pd;
+		pedidos[cliente][n_pedidos[cliente]] = pd;
 		n_pedidos[cliente]++;
 	}
+	fclose(csv);
 	return pedidos;
 }
 
