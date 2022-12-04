@@ -85,6 +85,7 @@ int main(void)
 		}
 		printf("Fazer outro relatório? \"0\" para não, \"1\" para sim: ");
 		scanf(" %d", &repetir);
+		printf("\n");
 	}
 	while(repetir); //Fazer outro relatorio caso o usuário quiser
 	return 0;
