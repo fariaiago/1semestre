@@ -37,7 +37,7 @@ int main(void)
 					printf("Digite o número do cliente e do pedido, respectivamente: ");
 					scanf(" %d %d", &cliente, &n_pedido);
 					pedido pd = pedidos[cliente][n_pedido];
-					printf("Relatório de pedido #%d-%d\nTipo de produto: %s\nQuantidade: %d\nDestino: %s\nFrete: %d\n",
+					printf("Relatório de pedido #%d-%d\nTipo de produto: %s\nQuantidade: %d\nDestino: %s\nFrete: R$%d\n",
 						cliente, n_pedido, tipos_para_texto(pd.tipo), pd.quantidade, locais_para_texto(pd.destino), calc_frete(pd.destino, pd.tipo, pd.quantidade));
 					break;
 				}
@@ -72,7 +72,7 @@ int calc_frete(int destino, int tipo, int quantidade)
 	{
 		return 0;
 	}
-	else if(peso < 2000)
+	else if(peso <= 2000)
 	{
 		return 100 + 100 * destino;
 	}
