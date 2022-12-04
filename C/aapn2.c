@@ -68,9 +68,7 @@ pedido (*ler_dados(pedido pedidos[][10], char *arquivo))[10]
 	char buffer[128];
 	while(fgets(buffer, 256, csv))
 	{
-		int cliente = 0, quantidade = 0;
-		enum produtos tipo;
-		enum 
+		int cliente = 0, tipo = 0, local = 0, quantidade = 0;
 		sscanf();
 	}
 	pedido pd;
