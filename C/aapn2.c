@@ -14,7 +14,7 @@ typedef struct pedido
 	int quantidade;
 } pedido;
 
-pedido ler_dados(pedido [2][10],char*);
+pedido *ler_dados(pedido [2][10],char*);
 
 int main(void)
 {
@@ -29,13 +29,15 @@ int main(void)
 		switch(tipo_relatorio)
 		{
 			case 0:
-				int cliente = 0, n_pedido = 0;
-				printf("Digite o número do cliente e do pedido, respectivamente: ");
-				scanf(" %d %d", &cliente, &n_pedido);
-				pedido pd = pedidos[cliente][n_pedido];
-				printf("Relatório de pedido #%d-%d\nTipo de produto: %d\nQuantidade: %d\nDestino: %d\nFrete: \%f\n",
-					cliente, n_pedido, pd.tipo, pd.quantidade, pd.destino);
-				break;
+				{
+					int cliente = 0, n_pedido = 0;
+					printf("Digite o número do cliente e do pedido, respectivamente: ");
+					scanf(" %d %d", &cliente, &n_pedido);
+					pedido pd = pedidos[cliente][n_pedido];
+					printf("Relatório de pedido #%d-%d\nTipo de produto: %d\nQuantidade: %d\nDestino: %d\nFrete: %%f\n",
+						cliente, n_pedido, pd.tipo, pd.quantidade, pd.destino);
+					break;
+				}
 			case 1:
 				break;
 			case 2:
@@ -49,14 +51,14 @@ int main(void)
 	return 0;
 }
 
-pedido ler_dados(pedido pedidos[2][10], char *arquivo)
+pedido *ler_dados(pedido pedidos[2][10], char *arquivo)
 {
 	//FILE *csv = fopen(arquivo, 'r');
 	pedido pd;
 	pd.tipo = AC3;
 	pd.destino = PALMAS;
 	pd.quantidade = 10;
-	pedido pedidos[2][10];
+	//pedido pedidos[2][10];
 	pedidos[0][0] = pd;
 	return pedidos;
 }
