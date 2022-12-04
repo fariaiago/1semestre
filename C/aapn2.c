@@ -28,5 +28,5 @@ int main(void)
 
 pedido *ler_dados(char *arquivo)
 {
-	a
+	FILE *csv = fopen(arquivo, 'r');
 }
