@@ -64,7 +64,7 @@ int main(void)
 			case 2:
 				{
 					int soma_peso = 0;
-					printf("Relatório geral\n");
+					printf("U\n");
 					printf("Pedidos abaixo de 1000kg: ");
 					for(int i = 0; i < 2; i++)
 					{
