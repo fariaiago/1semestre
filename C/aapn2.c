@@ -66,7 +66,13 @@ pedido (*ler_dados(pedido pedidos[][10], char *arquivo))[10]
 {
 	FILE *csv = fopen(arquivo, 'r');
 	char buffer[128];
-	while()
+	while(fgets(buffer, 256, csv))
+	{
+		int cliente = 0, quantidade = 0;
+		enum produtos tipo;
+		enum 
+		sscanf();
+	}
 	pedido pd;
 	pd.tipo = AC3;
 	pd.destino = PALMAS;
