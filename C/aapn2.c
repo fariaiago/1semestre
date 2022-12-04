@@ -21,12 +21,13 @@ int main(void)
 	do
 	{
 		int tipo_relatorio = 0;
-		printf("Qual relatório deseja fazer?\n\"0\" para por pedido, \"1\" para por cliente e \"2\" para geral.\n");
+		printf("Qual tipo de relatório deseja fazer?\n\"0\" para por pedido, \"1\" para por cliente e \"2\" para geral.\n");
 		scanf(" %d", &tipo_relatorio);
 		switch(tipo_relatorio)
 		{
 			case 0:
-				a
+				printf("");
+				scanf();
 				break;
 			case 0:
 				break;
