@@ -67,11 +67,13 @@ pedido (*ler_dados(pedido pedidos[][10], int n_pedidos[], char *arquivo))[10]
 {
 	FILE *csv = fopen(arquivo, "r");
 	char buffer[128];
+	fgets(buffer, 128, csv);
 	while(fgets(buffer, 128, csv))
 	{
 		int cliente = 0, tipo = 0, destino = 0, quantidade = 0;
 		sscanf(buffer, "%d %d %d %d", &cliente, &tipo, &destino, &quantidade);
 		pedido pd;
+		printf("%lu\n", sizeof(pd));
 		pd.tipo = tipo;
 		pd.destino = destino;
 		pd.quantidade = quantidade;
