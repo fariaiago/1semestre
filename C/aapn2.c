@@ -23,12 +23,13 @@ char *locais_para_texto(int);
 
 int main(void)
 {
-	//Ler CSV e transforma-lo em matrix
 	pedido pedidos[2][10];
 	int n_pedidos[2];
+	//Ler CSV e transforma-lo em matrix
 	ler_dados(pedidos, n_pedidos, "pedidos.csv");
 	do
 	{
+		//Questiona ao usuario qual tipo de relatório
 		int tipo_relatorio = 0;
 		printf("Qual tipo de relatório deseja fazer?\n\"0\" para por pedido, \"1\" para por cliente e \"2\" para geral.\n");
 		scanf(" %d", &tipo_relatorio);
@@ -41,7 +42,8 @@ int main(void)
 					scanf(" %d %d", &cliente, &n_pedido);
 					pedido pd = pedidos[cliente][n_pedido];
 					printf("Relatório de pedido #%d-%d\nTipo de produto: %s\nQuantidade: %d\nDestino: %s\nFrete: R$%d\n",
-						cliente, n_pedido, tipos_para_texto(pd.tipo), pd.quantidade, locais_para_texto(pd.destino), calc_frete(pd.destino, pd.tipo, pd.quantidade));
+						cliente, n_pedido, tipos_para_texto(pd.tipo), pd.quantidade, locais_para_texto(pd.destino),
+						calc_frete(pd.destino, pd.tipo, pd.quantidade));
 					break;
 				}
 			case 1:
@@ -77,11 +79,11 @@ int main(void)
 				}
 				break;
 			default:
-				printf("Erro, valor inválido.\n");
+				printf("Erro: tipo de relatório inválido.\n");
 				break;
 		}
 	}
-	while(0); //Fazer outro caso o usuário quiser
+	while(repetir); //Fazer outro relatorio caso o usuário quiser
 	return 0;
 }
 
