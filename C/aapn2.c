@@ -25,3 +25,8 @@ int main(void)
 	while(1); //Fazer outro caso o usuário quiser
 	return 0;
 }
+
+pedido *ler_dados(char *arquivo)
+{
+	a
+}
