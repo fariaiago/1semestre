@@ -59,10 +59,13 @@ int main(void)
 					break;
 				}
 			case 2:
-				for(int i = 0; i < 2; i++)
 				{
-					for(int j = 0; j < n_pedidos[cliente]; j++)
+					float soma_peso = 0;
+					for(int i = 0; i < 2; i++)
 					{
+						for(int j = 0; j < n_pedidos[cliente]; j++)
+						{
+						}
 					}
 				}
 				break;
