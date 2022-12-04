@@ -25,6 +25,7 @@ int main(void)
 {
 	pedido pedidos[2][10];
 	int n_pedidos[2];
+	int repetir = 0;
 	//Ler CSV e transforma-lo em matrix
 	ler_dados(pedidos, n_pedidos, "pedidos.csv");
 	do
@@ -82,7 +83,8 @@ int main(void)
 				printf("Erro: tipo de relatório inválido.\n");
 				break;
 		}
-		printf();
+		printf("Fazer outro relatório? \"0\" para não, \"1\" para sim: ");
+		scanf(" %d", &repetir);
 	}
 	while(repetir); //Fazer outro relatorio caso o usuário quiser
 	return 0;
