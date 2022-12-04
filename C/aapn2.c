@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+enum produtos = {}
 //Struct para representar um pedido
 int main(void)
 {
