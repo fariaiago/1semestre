@@ -26,13 +26,14 @@ int main(void)
 	pedido pedidos[2][10];
 	int n_pedidos[2];
 	int repetir = 0;
-	//Ler CSV e transforma-lo em matrix
+	
+	//Ler dados do CSV e coloca-os numa matrix
 	ler_dados(pedidos, n_pedidos, "pedidos.csv");
 	do
 	{
-		//Questiona ao usuario qual tipo de relatório
+		//Questiona ao usuario o tipo de relatório que ele quer que seja criado
 		int tipo_relatorio = 0;
-		printf("Qual tipo de relatório deseja fazer?\n\"0\" para por pedido, \"1\" para por cliente e \"2\" para geral.\n");
+		printf("Qual tipo de relatório deseja fazer? \"0\" para por pedido, \"1\" para por cliente e \"2\" para geral: ");
 		scanf(" %d", &tipo_relatorio);
 		switch(tipo_relatorio)
 		{
@@ -42,7 +43,7 @@ int main(void)
 					printf("Digite o número do cliente e do pedido separado por espaço, respectivamente: ");
 					scanf(" %d %d", &cliente, &n_pedido);
 					pedido pd = pedidos[cliente][n_pedido];
-					printf("Relatório de pedido #%d-%d\nTipo de produto: %s\nQuantidade: %d\nDestino: %s\nFrete: R$%d\n",
+					printf("RELATÓRIO DE PEDIDO #%d-%d\nTipo de produto: %s\nQuantidade: %d\nDestino: %s\nFrete: R$%d\n",
 						cliente, n_pedido, tipos_para_texto(pd.tipo), pd.quantidade, locais_para_texto(pd.destino),
 						calc_frete(pd.destino, pd.tipo, pd.quantidade));
 					break;
@@ -57,14 +58,14 @@ int main(void)
 					{
 						soma_peso += calc_peso(pedidos[cliente][i].tipo, pedidos[cliente][i].quantidade);
 					}
-					printf("Relatório de cliente #%d\nNúmero de pedidos: %d\nMédia de peso dos pedidos: %f\n",
+					printf("RELATÓRIO DE CLIENTE #%d\nNúmero de pedidos: %d\nMédia de peso dos pedidos: %f\n",
 						cliente, n_pedidos[cliente], soma_peso/(1.0*n_pedidos[cliente]));
 					break;
 				}
 			case 2:
 				{
 					int soma_peso = 0;
-					printf("U\n");
+					printf("RELATÓRIO GERAL\n");
 					printf("Pedidos abaixo de 1000kg: ");
 					for(int i = 0; i < 2; i++)
 					{
