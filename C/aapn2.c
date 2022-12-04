@@ -14,14 +14,14 @@ typedef struct pedido
 	int quantidade;
 } pedido;
 
-pedido *ler_dados(pedido [][10],char*)[10];
+pedido (*ler_dados(pedido [][10],char*))[10];
 
 int main(void)
 {
 	//Ler CSV e transforma-lo em matrix
 	pedido pedidos[2][10];
 	ler_dados(pedidos, "Blah");
-	do
+	dode
 	{
 		int tipo_relatorio = 0;
 		printf("Qual tipo de relatório deseja fazer?\n\"0\" para por pedido, \"1\" para por cliente e \"2\" para geral.\n");
@@ -51,7 +51,7 @@ int main(void)
 	return 0;
 }
 
-pedido *ler_dados(pedido pedidos[][10], char *arquivo)[10]
+pedido (*ler_dados(pedido pedidos[][10], char *arquivo))[10]
 {
 	//FILE *csv = fopen(arquivo, 'r');
 	pedido pd;
