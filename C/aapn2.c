@@ -29,6 +29,7 @@ int main(void)
 				int cliente = 0, pedido = 0;
 				printf("Digite o número do cliente e do pedido, respectivamente: ");
 				scanf(" %d %d", &cliente, &pedido);
+				func("Relatório do pedido #");
 				break;
 			case 1:
 				break;
