@@ -68,6 +68,7 @@ pedido (*ler_dados(pedido pedidos[][10], char *arquivo))[10]
 int calc_frete(int tipo, int quantidade)
 {
 	int peso = (tipo != 2 ? 20 : 5)*quantidade;
+	
 	return
 }
 
