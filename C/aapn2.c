@@ -31,7 +31,7 @@ int main(void)
 				scanf(" %d %d", &cliente, &n_pedido);
 				pedido pd = pedidos[cliente][n_pedido];
 				printf("Relatório de pedido #%d-%d\nTipo de produto: %d\nQuantidade: %d\nDestino: %d\nFrete: \%f\n",
-					cliente, n_pedido, pd.tipo, pd.quatidade, pd.destino);
+					cliente, n_pedido, pd.tipo, pd.quantidade, pd.destino);
 				break;
 			case 1:
 				break;
@@ -49,5 +49,11 @@ int main(void)
 pedido *ler_dados(char *arquivo)
 {
 	//FILE *csv = fopen(arquivo, 'r');
-	return {};
+	pedido pd;
+	pd.tipo = AC3;
+	pd.destino = PALMAS;
+	pd.quantidade = 10;
+	pedido pedidos[2][10];
+	pedidos[0][0] = pd;
+	return pedidos;
 }
