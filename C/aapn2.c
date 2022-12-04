@@ -92,6 +92,7 @@ int main(void)
 	return 0;
 }
 
+//Lê os dados do .csv e povoa a matrix com eles
 void ler_dados(pedido pedidos[][10], int n_pedidos[], char *arquivo)
 {
 	FILE *csv = fopen(arquivo, "r");
@@ -113,6 +114,7 @@ void ler_dados(pedido pedidos[][10], int n_pedidos[], char *arquivo)
 	fclose(csv);
 }
 
+//Retorna o valor do frete de um pedido
 int calc_frete(int destino, int tipo, int quantidade)
 {
 	int peso = calc_peso(tipo, quantidade);
@@ -136,7 +138,7 @@ int calc_peso(int tipo, int quantidade)
 	return (tipo != 2 ? 20 : 5)*quantidade;
 }
 
-//Retorna
+//Retorna o nome do tipo de produto baseado no valor do enum
 char *tipos_para_texto(int tipo)
 {
 	switch(tipo)
@@ -152,6 +154,7 @@ char *tipos_para_texto(int tipo)
 	}
 }
 
+//Retorna o nome do local de entrega do pedido baseado no valor do enum
 char *locais_para_texto(int destino)
 {
 	switch(destino)
