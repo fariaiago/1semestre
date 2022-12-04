@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 //Tipos de produtos disponíveis
 enum produtos {AC3 , AC2 , REJUNTE};
 
@@ -14,7 +15,7 @@ typedef struct pedido
 	int quantidade;
 } pedido;
 
-pedido (*ler_dados(pedido [][10], int*, char*))[10];
+void ler_dados(pedido [][10], int*, char*);
 int calc_frete(int, int, int);
 char *tipos_para_texto(int);
 char *locais_para_texto(int);
@@ -23,7 +24,7 @@ int main(void)
 {
 	//Ler CSV e transforma-lo em matrix
 	pedido pedidos[2][10];
-	int n_pedidos[] = {0, 0};
+	int n_pedidos[2];
 	ler_dados(pedidos, n_pedidos, "pedidos.csv");
 	do
 	{
@@ -35,7 +36,7 @@ int main(void)
 			case 0:
 				{
 					int cliente = 0, n_pedido = 0;
-					printf("Digite o número do cliente e do pedido, respectivamente: ");
+					printf("Digite o número do cliente e do pedido separado por espaço, respectivamente: ");
 					scanf(" %d %d", &cliente, &n_pedido);
 					pedido pd = pedidos[cliente][n_pedido];
 					printf("Relatório de pedido #%d-%d\nTipo de produto: %s\nQuantidade: %d\nDestino: %s\nFrete: R$%d\n",
@@ -45,7 +46,7 @@ int main(void)
 			case 1:
 				{
 					int cliente = 0;
-					printf("Digite o número do cliente e do pedido, respectivamente: ");
+					printf("Digite o número do cliente: ");
 					scanf(" %d", &cliente);
 					pedido pd = pedidos[cliente][0];
 					printf("Relatório de cliente #%d\nTipo de produto: %s\nQuantidade: %d\nDestino: %s\nFrete: R$%d\n",
@@ -63,7 +64,7 @@ int main(void)
 	return 0;
 }
 
-pedido (*ler_dados(pedido pedidos[][10], int n_pedidos[], char *arquivo))[10]
+void ler_dados(pedido pedidos[][10], int n_pedidos[], char *arquivo)
 {
 	FILE *csv = fopen(arquivo, "r");
 	char buffer[128];
@@ -81,7 +82,6 @@ pedido (*ler_dados(pedido pedidos[][10], int n_pedidos[], char *arquivo))[10]
 		n_pedidos[cliente]++;
 	}
 	fclose(csv);
-	return pedidos;
 }
 
 int calc_frete(int destino, int tipo, int quantidade)
