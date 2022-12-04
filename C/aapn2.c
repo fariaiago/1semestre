@@ -82,6 +82,7 @@ int main(void)
 				printf("Erro: tipo de relatório inválido.\n");
 				break;
 		}
+		
 	}
 	while(repetir); //Fazer outro relatorio caso o usuário quiser
 	return 0;
