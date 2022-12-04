@@ -50,11 +50,11 @@ int main(void)
 					float soma_peso = 0;
 					printf("Digite o número do cliente: ");
 					scanf(" %d", &cliente);
-					for(int i = 0; i < n_pedidos[cliente])
+					for(int i = 0; i < n_pedidos[cliente]; i++)
 					{
 						soma_peso += calc_peso(pedidos[cliente][i].tipo, pedidos[cliente][i].quantidade);
 					}
-					printf("Relatório de cliente #%d\nNúmero de pedidos: %d\nMédia de peso dos pedidos: R$%d\n",
+					printf("Relatório de cliente #%d\nNúmero de pedidos:\t%d\nMédia de peso dos pedidos:\t%f\n",
 						cliente, n_pedidos[cliente], soma_peso/(1.0*n_pedidos[cliente]));
 					break;
 				}
@@ -79,7 +79,6 @@ void ler_dados(pedido pedidos[][10], int n_pedidos[], char *arquivo)
 		int cliente = 0, tipo = 0, destino = 0, quantidade = 0;
 		sscanf(buffer, "%d,%d,%d,%d", &cliente, &tipo, &destino, &quantidade);
 		pedido pd;
-		printf("%d %d %d %d\n", cliente, tipo, destino, quantidade);
 		pd.tipo = tipo;
 		pd.destino = destino;
 		pd.quantidade = quantidade;
