@@ -20,7 +20,22 @@ int main(void)
 	pedido pedidos[2][10] = ler_dados();
 	do
 	{
-		//Fazer relatórios
+		int tipo_relatorio = 0;
+		printf("Qual relatório deseja fazer?\n\"0\" para por pedido, \"1\" para por cliente e \"2\" para geral.\n");
+		scanf(" %d", &tipo_relatorio);
+		switch(tipo_relatorio)
+		{
+			case 0:
+				a
+				break;
+			case 0:
+				break;
+			case 0:
+				break;
+			default:
+				printf("Erro, valor inválido.\n");
+				break;
+		}
 	}
 	while(1); //Fazer outro caso o usuário quiser
 	return 0;
