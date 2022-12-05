@@ -27,7 +27,7 @@ int main(void)
 	int n_pedidos[2];
 	int repetir = 0;
 
-	//Ler dados do CSV e coloca-os numa matrix
+	//Lê dados do CSV e coloca-os numa matrix
 	ler_dados(pedidos, n_pedidos, "pedidos.csv");
 	do
 	{
