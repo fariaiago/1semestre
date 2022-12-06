@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 //Tipos de produtos disponíveis
-enum produtos {AC3 , AC2 , REJUNTE};
+enum produtos {AC3, AC2, REJUNTE};
 
 //Destinos de entrega
 enum locais {PALMAS, PORTO_NACIONAL};
